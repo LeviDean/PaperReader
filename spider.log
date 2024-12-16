@@ -1,0 +1,1984 @@
+2024-12-16 14:19:02,124 - scrapy.utils.log - INFO - Scrapy 2.12.0 started (bot: scrapybot)
+2024-12-16 14:19:02,139 - scrapy.utils.log - INFO - Versions: lxml 5.3.0.0, libxml2 2.12.9, cssselect 1.2.0, parsel 1.9.1, w3lib 2.2.1, Twisted 24.11.0, Python 3.10.16 | packaged by conda-forge | (main, Dec  5 2024, 14:20:01) [Clang 18.1.8 ], pyOpenSSL 24.3.0 (OpenSSL 3.4.0 22 Oct 2024), cryptography 44.0.0, Platform macOS-15.0-arm64-arm-64bit
+2024-12-16 14:19:02,140 - scrapy.addons - INFO - Enabled addons:
+[]
+2024-12-16 14:19:02,142 - scrapy.utils.log - DEBUG - Using reactor: twisted.internet.selectreactor.SelectReactor
+2024-12-16 14:19:02,144 - scrapy.extensions.telnet - INFO - Telnet Password: 5f688aa0305dee0f
+2024-12-16 14:19:02,156 - scrapy.middleware - INFO - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2024-12-16 14:19:02,157 - scrapy.crawler - INFO - Overridden settings:
+{'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'}
+2024-12-16 14:19:02,275 - scrapy.middleware - INFO - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2024-12-16 14:19:02,277 - scrapy.middleware - INFO - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2024-12-16 14:19:02,277 - scrapy.middleware - INFO - Enabled item pipelines:
+[]
+2024-12-16 14:19:02,277 - scrapy.core.engine - INFO - Spider opened
+2024-12-16 14:19:02,285 - scrapy.extensions.logstats - INFO - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2024-12-16 14:19:02,285 - scrapy.extensions.telnet - INFO - Telnet console listening on 127.0.0.1:6025
+2024-12-16 14:19:07,566 - scrapy.core.engine - DEBUG - Crawled (200) <GET https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=&terms-0-field=title&classification-computer_science=y&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=2024-12-13&date-to_date=2024-12-16&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first> (referer: None)
+2024-12-16 14:19:07,672 - root - INFO - response: <200 https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=&terms-0-field=title&classification-computer_science=y&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=2024-12-13&date-to_date=2024-12-16&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first>
+2024-12-16 14:19:07,692 - root - INFO - paper: {'ID': ['2412.10373'],
+ 'abstract': ['3D occupancy prediction is important for autonomous driving due '
+              'to its comprehensive perception of the surroundings. To '
+              'incorporate sequential inputs, most existing methods fuse '
+              'representations from previous frames to infer the current 3D '
+              'occupancy. However, they fail to consider the continuity of '
+              'driving scenarios and ignore the strong prior provided by the '
+              'evolution of 3D scenes (e.g., only dynamic objects move). In '
+              'this paper, we propose a world-model-based framework to exploit '
+              'the scene evolution for perception. We reformulate 3D occupancy '
+              'prediction as a 4D occupancy forecasting problem conditioned on '
+              'the current sensor input. We decompose the scene evolution into '
+              'three factors: 1) ego motion alignment of static scenes; 2) '
+              'local movements of dynamic objects; and 3) completion of '
+              'newly-observed scenes. We then employ a Gaussian world model '
+              '(GaussianWorld) to explicitly exploit these priors and infer '
+              'the scene evolution in the 3D Gaussian space considering the '
+              'current RGB observation. We evaluate the effectiveness of our '
+              'framework on the widely used nuScenes dataset. Our '
+              'GaussianWorld improves the performance of the single-frame '
+              'counterpart by over 2% in mIoU without introducing additional '
+              'computations. Code: https://github.com/zuosc19/GaussianWorld.'],
+ 'author': ['Sicheng Zuo',
+            'Wenzhao Zheng',
+            'Yuanhui Huang',
+            'Jie Zhou',
+            'Jiwen Lu'],
+ 'link': ['https://arxiv.org/abs/2412.10373'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10373'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['GaussianWorld: Gaussian World Model for Streaming 3D Occupancy '
+           'Prediction']}
+2024-12-16 14:19:07,696 - root - INFO - paper: {'ID': ['2412.10372'],
+ 'abstract': ['Vision-Language Models (VLMs) trained via contrastive learning '
+              'have achieved notable success in natural image tasks. However, '
+              'their application in the medical domain remains limited due to '
+              'the scarcity of openly accessible, large-scale medical '
+              'image-text datasets. Existing medical VLMs either train on '
+              'closed-source proprietary or relatively small open-source '
+              'datasets that do not generalize well. Similarly, most models '
+              'remain specific to a single or limited number of medical '
+              'imaging domains, again restricting their applicability to other '
+              'modalities. To address this gap, we introduce UniMed, a '
+              'large-scale, open-source multi-modal medical dataset comprising '
+              'over 5.3 million image-text pairs across six diverse imaging '
+              'modalities: X-ray, CT, MRI, Ultrasound, Pathology, and Fundus. '
+              'UniMed is developed using a data-collection framework that '
+              'leverages Large Language Models (LLMs) to transform '
+              'modality-specific classification datasets into image-text '
+              'formats while incorporating existing image-text data from the '
+              'medical domain, facilitating scalable VLM pretraining. Using '
+              'UniMed, we trained UniMed-CLIP, a unified VLM for six '
+              'modalities that significantly outperforms existing generalist '
+              'VLMs and matches modality-specific medical VLMs, achieving '
+              'notable gains in zero-shot evaluations. For instance, '
+              'UniMed-CLIP improves over BiomedCLIP (trained on proprietary '
+              'data) by an absolute gain of +12.61, averaged over 21 datasets, '
+              'while using 3x less training data. To facilitate future '
+              'research, we release UniMed dataset, training codes, and models '
+              'at https://github.com/mbzuai-oryx/UniMed-CLIP.'],
+ 'author': ['Muhammad Uzair Khattak',
+            'Shahina Kunhimon',
+            'Muzammal Naseer',
+            'Salman Khan',
+            'Fahad Shahbaz Khan'],
+ 'link': ['https://arxiv.org/abs/2412.10372'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10372'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['UniMed-CLIP: Towards a Unified Image-Text Pretraining Paradigm for '
+           'Diverse Medical Imaging Modalities']}
+2024-12-16 14:19:07,698 - root - INFO - paper: {'ID': ['2412.10371'],
+ 'abstract': ['Vision-based autonomous driving shows great potential due to '
+              'its satisfactory performance and low costs. Most existing '
+              "methods adopt dense representations (e.g., bird's eye view) or "
+              'sparse representations (e.g., instance boxes) for '
+              'decision-making, which suffer from the trade-off between '
+              'comprehensiveness and efficiency. This paper explores a '
+              'Gaussian-centric end-to-end autonomous driving (GaussianAD) '
+              'framework and exploits 3D semantic Gaussians to extensively yet '
+              'sparsely describe the scene. We initialize the scene with '
+              'uniform 3D Gaussians and use surrounding-view images to '
+              'progressively refine them to obtain the 3D Gaussian scene '
+              'representation. We then use sparse convolutions to efficiently '
+              'perform 3D perception (e.g., 3D detection, semantic map '
+              'construction). We predict 3D flows for the Gaussians with '
+              'dynamic semantics and plan the ego trajectory accordingly with '
+              'an objective of future scene forecasting. Our GaussianAD can be '
+              'trained in an end-to-end manner with optional perception labels '
+              'when available. Extensive experiments on the widely used '
+              'nuScenes dataset verify the effectiveness of our end-to-end '
+              'GaussianAD on various tasks including motion planning, 3D '
+              'occupancy prediction, and 4D occupancy forecasting. Code: '
+              'https://github.com/wzzheng/GaussianAD.'],
+ 'author': ['Wenzhao Zheng',
+            'Junjie Wu',
+            'Yao Zheng',
+            'Sicheng Zuo',
+            'Zixun Xie',
+            'Longchao Yang',
+            'Yong Pan',
+            'Zhihui Hao',
+            'Peng Jia',
+            'Xianpeng Lang',
+            'Shanghang Zhang'],
+ 'link': ['https://arxiv.org/abs/2412.10371'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10371'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['GaussianAD: Gaussian-Centric End-to-End Autonomous Driving']}
+2024-12-16 14:19:07,701 - root - INFO - paper: {'ID': ['2412.10370'],
+ 'abstract': ['We investigate some previously unexplored (or underexplored) '
+              'computational aspects of total variation (TV) distance. First, '
+              'we give a simple deterministic polynomial-time algorithm for '
+              'checking equivalence between mixtures of product distributions, '
+              'over arbitrary alphabets. This corresponds to a special case, '
+              'whereby the TV distance between the two distributions is zero. '
+              'Second, we prove that unless $\\mathsf{NP} \\subseteq '
+              '\\mathsf{RP}$, it is impossible to efficiently estimate the TV '
+              'distance between arbitrary Ising models, even in a '
+              'bounded-error randomized setting.'],
+ 'author': ['Arnab Bhattacharyya',
+            'Sutanu Gayen',
+            'Kuldeep S. Meel',
+            'Dimitrios Myrisiotis',
+            'A. Pavan',
+            'N. V. Vinodchandran'],
+ 'link': ['https://arxiv.org/abs/2412.10370'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10370'],
+ 'primary_cat': ['cs.DS'],
+ 'title': ['Computational Explorations of Total Variation Distance']}
+2024-12-16 14:19:07,703 - root - INFO - paper: {'ID': ['2412.10369'],
+ 'abstract': ['We propose a grounded approach to meaning in language typology. '
+              'We treat data from perceptual modalities, such as images, as a '
+              'language-agnostic representation of meaning. Hence, we can '
+              'quantify the function--form relationship between images and '
+              'captions across languages. Inspired by information theory, we '
+              'define "groundedness", an empirical measure of contextual '
+              'semantic contentfulness (formulated as a difference in '
+              'surprisal) which can be computed with multilingual multimodal '
+              'language models. As a proof of concept, we apply this measure '
+              'to the typology of word classes. Our measure captures the '
+              'contentfulness asymmetry between functional (grammatical) and '
+              'lexical (content) classes across languages, but contradicts the '
+              'view that functional classes do not convey content. Moreover, '
+              'we find universal trends in the hierarchy of groundedness '
+              '(e.g., nouns > adjectives > verbs), and show that our measure '
+              'partly correlates with psycholinguistic concreteness norms in '
+              'English. We release a dataset of groundedness scores for 30 '
+              'languages. Our results suggest that the grounded typology '
+              'approach can provide quantitative evidence about semantic '
+              'function in language.'],
+ 'author': ['Coleman Haley', 'Sharon Goldwater', 'Edoardo Ponti'],
+ 'link': ['https://arxiv.org/abs/2412.10369'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10369'],
+ 'primary_cat': ['cs.CL'],
+ 'title': ['A Grounded Typology of Word Classes']}
+2024-12-16 14:19:07,705 - root - INFO - paper: {'ID': ['2412.10362'],
+ 'abstract': ['Low-rank adapters enable fine-tuning of large models with only '
+              'a small number of parameters, thus reducing storage costs and '
+              'minimizing the risk of catastrophic forgetting. However, they '
+              'often pose optimization challenges, with poor convergence. To '
+              'overcome these challenges, we introduce an over-parameterized '
+              'approach that accelerates training without increasing inference '
+              'costs. This method reparameterizes low-rank adaptation by '
+              'employing a separate MLP and learned embedding for each layer. '
+              'The learned embedding is input to the MLP, which generates the '
+              'adapter parameters. Such overparamaterization has been shown to '
+              'implicitly function as an adaptive learning rate and momentum, '
+              'accelerating optimization. At inference time, the MLP can be '
+              'discarded, leaving behind a standard low-rank adapter. To study '
+              'the effect of MLP overparameterization on a small yet difficult '
+              'proxy task, we implement it for matrix factorization, and find '
+              'it achieves faster convergence and lower final loss. Extending '
+              'this approach to larger-scale tasks, we observe consistent '
+              'performance gains across domains. We achieve improvements in '
+              'vision-language tasks and especially notable increases in image '
+              'generation, with CMMD scores improving by up to 15 points.'],
+ 'author': ['Piotr Teterwak', 'Kate Saenko', 'Bryan A. Plummer', 'Ser-Nam Lim'],
+ 'link': ['https://arxiv.org/abs/2412.10362'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10362'],
+ 'primary_cat': ['cs.LG'],
+ 'title': ['OP-LoRA: The Blessing of Dimensionality']}
+2024-12-16 14:19:07,711 - root - INFO - paper: {'ID': ['2412.10360'],
+ 'abstract': ['Despite the rapid integration of video perception capabilities '
+              'into Large Multimodal Models (LMMs), the underlying mechanisms '
+              'driving their video understanding remain poorly understood. '
+              'Consequently, many design decisions in this domain are made '
+              'without proper justification or analysis. The high '
+              'computational cost of training and evaluating such models, '
+              'coupled with limited open research, hinders the development of '
+              'video-LMMs. To address this, we present a comprehensive study '
+              'that helps uncover what effectively drives video understanding '
+              'in LMMs.\n'
+              '  We begin by critically examining the primary contributors to '
+              'the high computational requirements associated with video-LMM '
+              'research and discover Scaling Consistency, wherein design and '
+              'training decisions made on smaller models and datasets (up to a '
+              'critical size) effectively transfer to larger models. '
+              'Leveraging these insights, we explored many video-specific '
+              'aspects of video-LMMs, including video sampling, architectures, '
+              'data composition, training schedules, and more. For example, we '
+              'demonstrated that fps sampling during training is vastly '
+              'preferable to uniform frame sampling and which vision encoders '
+              'are the best for video representation.\n'
+              '  Guided by these findings, we introduce Apollo, a '
+              'state-of-the-art family of LMMs that achieve superior '
+              'performance across different model sizes. Our models can '
+              'perceive hour-long videos efficiently, with Apollo-3B '
+              'outperforming most existing $7$B models with an impressive 55.1 '
+              'on LongVideoBench. Apollo-7B is state-of-the-art compared to 7B '
+              'LMMs with a 70.9 on MLVU, and 63.3 on Video-MME.'],
+ 'author': ['Orr Zohar',
+            'Xiaohan Wang',
+            'Yann Dubois',
+            'Nikhil Mehta',
+            'Tong Xiao',
+            'Philippe Hansen-Estruch',
+            'Licheng Yu',
+            'Xiaofang Wang',
+            'Felix Juefei-Xu',
+            'Ning Zhang',
+            'Serena Yeung-Levy',
+            'Xide Xia'],
+ 'link': ['https://arxiv.org/abs/2412.10360'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10360'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['Apollo: An Exploration of Video Understanding in Large Multimodal '
+           'Models']}
+2024-12-16 14:19:07,713 - root - INFO - paper: {'ID': ['2412.10357'],
+ 'abstract': ['We consider the problem of releasing a sparse histogram under '
+              '$(\\varepsilon, δ)$-differential privacy. The stability '
+              'histogram independently adds noise from a Laplace or Gaussian '
+              'distribution to the non-zero entries and removes those noisy '
+              'counts below a threshold.\n'
+              '  Thereby, the introduction of new non-zero values between '
+              'neighboring histograms is only revealed with probability at '
+              'most $δ$, and typically, the value of the threshold dominates '
+              'the error of the mechanism. We consider the variant of the '
+              'stability histogram with Gaussian noise.\n'
+              "  Recent works ([Joseph and Yu, COLT '24] and [Lebeda, SOSA "
+              "'25]) reduced the error for private histograms using correlated "
+              'Gaussian noise. However, these techniques can not be directly '
+              "applied in the very sparse setting. Instead, we adopt Lebeda's "
+              'technique and show that adding correlated noise to the non-zero '
+              'counts only allows us to reduce the magnitude of noise when we '
+              'have a sparsity bound. This, in turn, allows us to use a lower '
+              'threshold by up to a factor of $1/2$ compared to the '
+              'non-correlated noise mechanism. We then extend our mechanism to '
+              'a setting without a known bound on sparsity. Additionally, we '
+              'show that correlated noise can give a similar improvement for '
+              'the more practical discrete Gaussian mechanism.'],
+ 'author': ['Christian Janos Lebeda', 'Lukas Retschmeier'],
+ 'link': ['https://arxiv.org/abs/2412.10357'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10357'],
+ 'primary_cat': ['cs.DS'],
+ 'title': ['The Correlated Gaussian Sparse Histogram Mechanism']}
+2024-12-16 14:19:07,715 - root - INFO - paper: {'ID': ['2412.10354'],
+ 'abstract': ['We present NeuralOperator, an open-source Python library for '
+              'operator learning. Neural operators generalize neural networks '
+              'to maps between function spaces instead of finite-dimensional '
+              'Euclidean spaces. They can be trained and inferenced on input '
+              'and output functions given at various discretizations, '
+              'satisfying a discretization convergence properties. Built on '
+              'top of PyTorch, NeuralOperator provides all the tools for '
+              'training and deploying neural operator models, as well as '
+              'developing new ones, in a high-quality, tested, open-source '
+              'package. It combines cutting-edge models and customizability '
+              'with a gentle learning curve and simple user interface for '
+              'newcomers.'],
+ 'author': ['Jean Kossaifi',
+            'Nikola Kovachki',
+            'Zongyi Li',
+            'Davit Pitt',
+            'Miguel Liu-Schiaffini',
+            'Robert Joseph George',
+            'Boris Bonev',
+            'Kamyar Azizzadenesheli',
+            'Julius Berner',
+            'Anima Anandkumar'],
+ 'link': ['https://arxiv.org/abs/2412.10354'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10354'],
+ 'primary_cat': ['cs.LG'],
+ 'title': ['A Library for Learning Neural Operators']}
+2024-12-16 14:19:07,717 - root - INFO - paper: {'ID': ['2412.10353'],
+ 'abstract': ['Deep Neural Networks are vulnerable to adversarial examples, '
+              'i.e., carefully crafted input samples that can cause models to '
+              'make incorrect predictions with high confidence. To mitigate '
+              'these vulnerabilities, adversarial training and detection-based '
+              'defenses have been proposed to strengthen models in advance. '
+              'However, most of these approaches focus on a single data '
+              'modality, overlooking the relationships between visual patterns '
+              'and textual descriptions of the input. In this paper, we '
+              'propose a novel defense, Multi-Shield, designed to combine and '
+              'complement these defenses with multi-modal information to '
+              'further enhance their robustness. Multi-Shield leverages '
+              'multi-modal large language models to detect adversarial '
+              'examples and abstain from uncertain classifications when there '
+              'is no alignment between textual and visual representations of '
+              'the input. Extensive evaluations on CIFAR-10 and ImageNet '
+              'datasets, using robust and non-robust image classification '
+              'models, demonstrate that Multi-Shield can be easily integrated '
+              'to detect and reject adversarial examples, outperforming the '
+              'original defenses.'],
+ 'author': ['Francesco Villani',
+            'Igor Maljkovic',
+            'Dario Lazzaro',
+            'Angelo Sotgiu',
+            'Antonio Emanuele Cinà',
+            'Fabio Roli'],
+ 'link': ['https://arxiv.org/abs/2412.10353'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10353'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['Robust image classification with multi-modal large language '
+           'models']}
+2024-12-16 14:19:07,719 - root - INFO - paper: {'ID': ['2412.10351'],
+ 'abstract': ['This paper explores the application of a novel multi-task '
+              'vision transformer (ViT) model for the estimation of canopy '
+              'height models (CHMs) using 4-band National Agriculture Imagery '
+              'Program (NAIP) imagery across the western United States. We '
+              'compare the effectiveness of this model in terms of accuracy '
+              'and precision aggregated across ecoregions and class heights '
+              'versus three other benchmark peer-reviewed models. Key findings '
+              'suggest that, while other benchmark models can provide high '
+              'precision in localized areas, the VibrantVS model has '
+              'substantial advantages across a broad reach of ecoregions in '
+              'the western United States with higher accuracy, higher '
+              'precision, the ability to generate updated inference at a '
+              'cadence of three years or less, and high spatial resolution. '
+              'The VibrantVS model provides significant value for ecological '
+              'monitoring and land management decisions for wildfire '
+              'mitigation.'],
+ 'author': ['Tony Chang',
+            'Kiarie Ndegwa',
+            'Andreas Gros',
+            'Vincent A. Landau',
+            'Luke J. Zachmann',
+            'Bogdan State',
+            'Mitchell A. Gritts',
+            'Colton W. Miller',
+            'Nathan E. Rutenbeck',
+            'Scott Conway',
+            'Guy Bayes'],
+ 'link': ['https://arxiv.org/abs/2412.10351'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10351'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['VibrantVS: A high-resolution multi-task transformer for forest '
+           'canopy height estimation']}
+2024-12-16 14:19:07,723 - root - INFO - paper: {'ID': ['2412.10350'],
+ 'abstract': ['Safe, smooth, and optimal motion planning for nonholonomically '
+              'constrained mobile robots and autonomous vehicles is essential '
+              'for achieving reliable, seamless, and efficient autonomy in '
+              'logistics, mobility, and service industries. In many such '
+              'application settings, nonholonomic robots, like unicycles with '
+              'restricted motion, require precise planning and control of both '
+              'translational and orientational motion to approach specific '
+              'locations in a designated orientation, such as for approaching '
+              'changing, parking, and loading areas. In this paper, we '
+              'introduce a new dual-headway unicycle pose control method by '
+              'leveraging an adaptively placed headway point in front of the '
+              'unicycle pose and a tailway point behind the goal pose. In '
+              'summary, the unicycle robot continuously follows its headway '
+              'point, which chases the tailway point of the goal pose and the '
+              'asymptotic motion of the tailway point towards the goal '
+              'position guides the unicycle robot to approach the goal '
+              'location with the correct orientation. The simple and intuitive '
+              'geometric construction of dual-headway unicycle pose control '
+              'enables an explicit convex feedback motion prediction bound on '
+              'the closed-loop unicycle motion trajectory for fast and '
+              'accurate safety verification. We present an application of '
+              'dual-headway unicycle control for optimal sampling-based motion '
+              'planning around obstacles. In numerical simulations, we show '
+              'that optimal unicycle motion planning using dual-headway '
+              'translation and orientation distances significantly outperforms '
+              'Euclidean translation and cosine orientation distances in '
+              'generating smooth motion with minimal travel and turning '
+              'effort.'],
+ 'author': ['Aykut İşleyen',
+            'Abhidnya Kadu',
+            'René van de Molengraft',
+            'Ömür Arslan'],
+ 'link': ['https://arxiv.org/abs/2412.10350'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10350'],
+ 'primary_cat': ['cs.RO'],
+ 'title': ['Adaptive Dual-Headway Unicycle Pose Control and Motion Prediction '
+           'for Optimal Sampling-Based Feedback Motion Planning']}
+2024-12-16 14:19:07,727 - root - INFO - paper: {'ID': ['2412.10349'],
+ 'abstract': ['In dynamic environments, robots often encounter constrained '
+              'movement trajectories when manipulating objects with specific '
+              'properties, such as doors. Therefore, applying the appropriate '
+              'force is crucial to prevent damage to both the robots and the '
+              'objects. However, current vision-guided robot state generation '
+              'methods often falter in this regard, as they lack the '
+              'integration of tactile perception. To tackle this issue, this '
+              'paper introduces a novel state diffusion framework termed '
+              'SafeDiff. It generates a prospective state sequence from the '
+              'current robot state and visual context observation while '
+              'incorporating real-time tactile feedback to refine the '
+              'sequence. As far as we know, this is the first study '
+              'specifically focused on ensuring force safety in robotic '
+              'manipulation. It significantly enhances the rationality of '
+              'state planning, and the safe action trajectory is derived from '
+              'inverse dynamics based on this refined planning. In practice, '
+              'unlike previous approaches that concatenate visual and tactile '
+              'data to generate future robot state sequences, our method '
+              'employs tactile data as a calibration signal to adjust the '
+              "robot's state within the state space implicitly. Additionally, "
+              "we've developed a large-scale simulation dataset called "
+              'SafeDoorManip50k, offering extensive multimodal data to train '
+              'and evaluate the proposed method. Extensive experiments show '
+              'that our visual-tactile model substantially mitigates the risk '
+              'of harmful forces in the door opening, across both simulated '
+              'and real-world settings.'],
+ 'author': ['Lai Wei', 'Jiahua Ma', 'Yibo Hu', 'Ruimao Zhang'],
+ 'link': ['https://arxiv.org/abs/2412.10349'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10349'],
+ 'primary_cat': ['cs.RO'],
+ 'title': ['Ensuring Force Safety in Vision-Guided Robotic Manipulation via '
+           'Implicit Tactile Calibration']}
+2024-12-16 14:19:07,729 - root - INFO - paper: {'ID': ['2412.10348'],
+ 'abstract': ['In current multimodal tasks, models typically freeze the '
+              'encoder and decoder while adapting intermediate layers to '
+              'task-specific goals, such as region captioning. Region-level '
+              'visual understanding presents significant challenges for '
+              'large-scale vision-language models. While limited spatial '
+              'awareness is a known issue, coarse-grained pretraining, in '
+              'particular, exacerbates the difficulty of optimizing latent '
+              'representations for effective encoder-decoder alignment. We '
+              'propose AlignCap, a framework designed to enhance region-level '
+              'understanding through fine-grained alignment of latent spaces. '
+              'Our approach introduces a novel latent feature refinement '
+              'module that enhances conditioned latent space representations '
+              'to improve region-level captioning performance. We also propose '
+              'an innovative alignment strategy, the semantic space alignment '
+              'module, which boosts the quality of multimodal representations. '
+              'Additionally, we incorporate contrastive learning in a novel '
+              'manner within both modules to further enhance region-level '
+              'captioning performance. To address spatial limitations, we '
+              'employ a General Object Detection (GOD) method as a data '
+              'preprocessing pipeline that enhances spatial reasoning at the '
+              'regional level. Extensive experiments demonstrate that our '
+              'approach significantly improves region-level captioning '
+              'performance across various tasks'],
+ 'author': ['Yuan Sun', 'Zhao Zhang', 'Jorge Ortiz'],
+ 'link': ['https://arxiv.org/abs/2412.10348'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10348'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['A dual contrastive framework']}
+2024-12-16 14:19:07,730 - root - INFO - paper: {'ID': ['2412.10347'],
+ 'abstract': ['As key elements within the central dogma, DNA, RNA, and '
+              'proteins play crucial roles in maintaining life by guaranteeing '
+              'accurate genetic expression and implementation. Although '
+              'research on these molecules has profoundly impacted fields like '
+              'medicine, agriculture, and industry, the diversity of machine '
+              'learning approaches-from traditional statistical methods to '
+              'deep learning models and large language models-poses challenges '
+              'for researchers in choosing the most suitable models for '
+              'specific tasks, especially for cross-omics and multi-omics '
+              'tasks due to the lack of comprehensive benchmarks. To address '
+              'this, we introduce the first comprehensive multi-omics '
+              'benchmark COMET (Benchmark for Biological COmprehensive '
+              'Multi-omics Evaluation Tasks and Language Models), designed to '
+              'evaluate models across single-omics, cross-omics, and '
+              'multi-omics tasks. First, we curate and develop a diverse '
+              'collection of downstream tasks and datasets covering key '
+              'structural and functional aspects in DNA, RNA, and proteins, '
+              'including tasks that span multiple omics levels. Then, we '
+              'evaluate existing foundational language models for DNA, RNA, '
+              'and proteins, as well as the newly proposed multi-omics method, '
+              'offering valuable insights into their performance in '
+              'integrating and analyzing data from different biological '
+              'modalities. This benchmark aims to define critical issues in '
+              'multi-omics research and guide future directions, ultimately '
+              'promoting advancements in understanding biological processes '
+              'through integrated and different omics data analysis.'],
+ 'author': ['Yuchen Ren',
+            'Wenwei Han',
+            'Qianyuan Zhang',
+            'Yining Tang',
+            'Weiqiang Bai',
+            'Yuchen Cai',
+            'Lifeng Qiao',
+            'Hao Jiang',
+            'Dong Yuan',
+            'Tao Chen',
+            'Siqi Sun',
+            'Pan Tan',
+            'Wanli Ouyang',
+            'Nanqing Dong',
+            'Xinzhu Ma',
+            'Peng Ye'],
+ 'link': ['https://arxiv.org/abs/2412.10347'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10347'],
+ 'primary_cat': ['q-bio.BM'],
+ 'title': ['COMET: Benchmark for Comprehensive Biological Multi-omics '
+           'Evaluation Tasks and Language Models']}
+2024-12-16 14:19:07,732 - root - INFO - paper: {'ID': ['2412.10345'],
+ 'abstract': ['Although large vision-language-action (VLA) models pretrained '
+              'on extensive robot datasets offer promising generalist policies '
+              'for robotic learning, they still struggle with spatial-temporal '
+              'dynamics in interactive robotics, making them less effective in '
+              'handling complex tasks, such as manipulation. In this work, we '
+              'introduce visual trace prompting, a simple yet effective '
+              "approach to facilitate VLA models' spatial-temporal awareness "
+              'for action prediction by encoding state-action trajectories '
+              'visually. We develop a new TraceVLA model by finetuning OpenVLA '
+              'on our own collected dataset of 150K robot manipulation '
+              'trajectories using visual trace prompting. Evaluations of '
+              'TraceVLA across 137 configurations in SimplerEnv and 4 tasks on '
+              'a physical WidowX robot demonstrate state-of-the-art '
+              'performance, outperforming OpenVLA by 10% on SimplerEnv and '
+              '3.5x on real-robot tasks and exhibiting robust generalization '
+              'across diverse embodiments and scenarios. To further validate '
+              'the effectiveness and generality of our method, we present a '
+              'compact VLA model based on 4B Phi-3-Vision, pretrained on the '
+              'Open-X-Embodiment and finetuned on our dataset, rivals the 7B '
+              'OpenVLA baseline while significantly improving inference '
+              'efficiency.'],
+ 'author': ['Ruijie Zheng',
+            'Yongyuan Liang',
+            'Shuaiyi Huang',
+            'Jianfeng Gao',
+            'Hal Daumé III',
+            'Andrey Kolobov',
+            'Furong Huang',
+            'Jianwei Yang'],
+ 'link': ['https://arxiv.org/abs/2412.10345'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10345'],
+ 'primary_cat': ['cs.RO'],
+ 'title': ['TraceVLA: Visual Trace Prompting Enhances Spatial-Temporal '
+           'Awareness for Generalist Robotic Policies']}
+2024-12-16 14:19:07,735 - root - INFO - paper: {'ID': ['2412.10342'],
+ 'abstract': ['Digital agents are increasingly employed to automate tasks in '
+              'interactive digital environments such as web pages, software '
+              'applications, and operating systems. While text-based agents '
+              'built on Large Language Models (LLMs) often require frequent '
+              'updates due to platform-specific APIs, visual agents leveraging '
+              'Multimodal Large Language Models (MLLMs) offer enhanced '
+              'adaptability by interacting directly with Graphical User '
+              'Interfaces (GUIs). However, these agents face significant '
+              'challenges in visual perception, particularly when handling '
+              'high-resolution, visually complex digital environments. This '
+              'paper introduces Iris, a foundational visual agent that '
+              'addresses these challenges through two key innovations: '
+              'Information-Sensitive Cropping (ISC) and Self-Refining Dual '
+              'Learning (SRDL). ISC dynamically identifies and prioritizes '
+              'visually dense regions using a edge detection algorithm, '
+              'enabling efficient processing by allocating more computational '
+              'resources to areas with higher information density. SRDL '
+              "enhances the agent's ability to handle complex tasks by "
+              'leveraging a dual-learning loop, where improvements in '
+              'referring (describing UI elements) reinforce grounding '
+              '(locating elements) and vice versa, all without requiring '
+              'additional annotated data. Empirical evaluations demonstrate '
+              'that Iris achieves state-of-the-art performance across multiple '
+              'benchmarks with only 850K GUI annotations, outperforming '
+              'methods using 10x more training data. These improvements '
+              'further translate to significant gains in both web and OS agent '
+              'downstream tasks.'],
+ 'author': ['Zhiqi Ge',
+            'Juncheng Li',
+            'Xinglei Pang',
+            'Minghe Gao',
+            'Kaihang Pan',
+            'Wang Lin',
+            'Hao Fei',
+            'Wenqiao Zhang',
+            'Siliang Tang',
+            'Yueting Zhuang'],
+ 'link': ['https://arxiv.org/abs/2412.10342'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10342'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['Iris: Breaking GUI Complexity with Adaptive Focus and '
+           'Self-Refining']}
+2024-12-16 14:19:07,737 - root - INFO - paper: {'ID': ['2412.10341'],
+ 'abstract': ['This paper presents an innovative method for predicting shape '
+              'errors in 5-axis machining using graph neural networks. The '
+              'graph structure is defined with nodes representing workpiece '
+              'surface points and edges denoting the neighboring '
+              'relationships. The dataset encompasses data from a material '
+              'removal simulation, process data, and post-machining quality '
+              'information. Experimental results show that the presented '
+              'approach can generalize the shape error prediction for the '
+              'investigated workpiece geometry. Moreover, by modelling spatial '
+              'and temporal connections within the workpiece, the approach '
+              'handles a low number of labels compared to non-graphical '
+              'methods such as Support Vector Machines.'],
+ 'author': ['Julia Huuk', 'Abheek Dhingra', 'Eirini Ntoutsi', 'Bernd Denkena'],
+ 'link': ['https://arxiv.org/abs/2412.10341'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10341'],
+ 'primary_cat': ['eess.SY'],
+ 'title': ['Shape error prediction in 5-axis machining using graph neural '
+           'networks']}
+2024-12-16 14:19:07,738 - root - INFO - paper: {'ID': ['2412.10339'],
+ 'abstract': ['Semantic segmentation often suffers from significant '
+              'performance degradation when the trained network is applied to '
+              'a different domain. To address this issue, unsupervised domain '
+              'adaptation (UDA) has been extensively studied. Existing methods '
+              'introduce the domain bridging techniques to mitigate '
+              'substantial domain gap, which construct intermediate domains to '
+              'facilitate the gradual transfer of knowledge across different '
+              'domains. However, these strategies often require '
+              'dataset-specific designs and may generate unnatural '
+              'intermediate distributions that lead to semantic shift. In this '
+              'paper, we propose DiDA, a universal degradation-based bridging '
+              'technique formalized as a diffusion forward process. DiDA '
+              'consists of two key modules: (1) Degradation-based Intermediate '
+              'Domain Construction, which creates continuous intermediate '
+              'domains through simple image degradation operations to '
+              'encourage learning domain-invariant features as domain '
+              'differences gradually diminish; (2) Semantic Shift '
+              'Compensation, which leverages a diffusion encoder to encode and '
+              'compensate for semantic shift information with degraded '
+              'time-steps, preserving discriminative representations in the '
+              'intermediate domains. As a plug-and-play solution, DiDA '
+              'supports various degradation operations and seamlessly '
+              'integrates with existing UDA methods. Extensive experiments on '
+              'prevalent synthetic-to-real semantic segmentation benchmarks '
+              'demonstrate that DiDA consistently improves performance across '
+              'different settings and achieves new state-of-the-art results '
+              'when combined with existing methods.'],
+ 'author': ['Wangkai Li', 'Rui Sun', 'Tianzhu Zhang'],
+ 'link': ['https://arxiv.org/abs/2412.10339'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10339'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['A Universal Degradation-based Bridging Technique for Domain '
+           'Adaptive Semantic Segmentation']}
+2024-12-16 14:19:07,739 - root - INFO - paper: {'ID': ['2412.10338'],
+ 'abstract': ['Deep state-space models (SSMs), like recent Mamba '
+              'architectures, are emerging as a promising alternative to CNN '
+              'and Transformer networks. Existing Mamba-based restoration '
+              'methods process the visual data by leveraging a '
+              'flatten-and-scan strategy that converts image patches into a 1D '
+              'sequence before scanning. However, this scanning paradigm '
+              'ignores local pixel dependencies and introduces spatial '
+              'misalignment by positioning distant pixels incorrectly '
+              'adjacent, which reduces local noise-awareness and degrades '
+              'image sharpness in low-level vision tasks. To overcome these '
+              'issues, we propose a novel slice-and-scan strategy that '
+              'alternates scanning along intra- and inter-slices. We further '
+              'design a new Vision State Space Module (VSSM) for image '
+              'deblurring, and tackle the inefficiency challenges of the '
+              'current Mamba-based vision module. Building upon this, we '
+              'develop XYScanNet, an SSM architecture integrated with a '
+              'lightweight feature fusion module for enhanced image '
+              'deblurring. XYScanNet, maintains competitive distortion metrics '
+              'and significantly improves perceptual performance. Experimental '
+              'results show that XYScanNet enhances KID by $17\\%$ compared to '
+              'the nearest competitor. Our code will be released soon.'],
+ 'author': ['Hanzhou Liu', 'Chengkai Liu', 'Jiacong Xu', 'Peng Jiang', 'Mi Lu'],
+ 'link': ['https://arxiv.org/abs/2412.10338'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10338'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['XYScanNet: An Interpretable State Space Model for Perceptual Image '
+           'Deblurring']}
+2024-12-16 14:19:07,741 - root - INFO - paper: {'ID': ['2412.10337'],
+ 'abstract': ['The increased capabilities of generative AI have dramatically '
+              'expanded its possible use cases in medicine. We provide a '
+              'comprehensive overview of generative AI use cases for '
+              'clinicians, patients, clinical trial organizers, researchers, '
+              'and trainees. We then discuss the many challenges -- including '
+              'maintaining privacy and security, improving transparency and '
+              'interpretability, upholding equity, and rigorously evaluating '
+              'models -- which must be overcome to realize this potential, and '
+              'the open research directions they give rise to.'],
+ 'author': ['Divya Shanmugam',
+            'Monica Agrawal',
+            'Rajiv Movva',
+            'Irene Y. Chen',
+            'Marzyeh Ghassemi',
+            'Emma Pierson'],
+ 'link': ['https://arxiv.org/abs/2412.10337'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10337'],
+ 'primary_cat': ['cs.LG'],
+ 'title': ['Generative AI in Medicine']}
+2024-12-16 14:19:07,743 - root - INFO - paper: {'ID': ['2412.10331'],
+ 'abstract': ['The advent of artificial intelligence (AI) technologies has '
+              'significantly changed many domains, including applied '
+              'statistics. This review and vision paper explores the evolving '
+              'role of applied statistics in the AI era, drawing from our '
+              'experiences in engineering statistics. We begin by outlining '
+              'the fundamental concepts and historical developments in applied '
+              'statistics and tracing the rise of AI technologies. '
+              'Subsequently, we review traditional areas of applied '
+              'statistics, using examples from engineering statistics to '
+              'illustrate key points. We then explore emerging areas in '
+              'applied statistics, driven by recent technological '
+              'advancements, highlighting examples from our recent projects. '
+              'The paper discusses the symbiotic relationship between AI and '
+              'applied statistics, focusing on how statistical principles can '
+              'be employed to study the properties of AI models and enhance AI '
+              'systems. We also examine how AI can advance applied statistics '
+              'in terms of modeling and analysis. In conclusion, we reflect on '
+              'the future role of statisticians. Our paper aims to shed light '
+              'on the transformative impact of AI on applied statistics and '
+              'inspire further exploration in this dynamic field.'],
+ 'author': ['Jie Min',
+            'Xinyi Song',
+            'Simin Zheng',
+            'Caleb B. King',
+            'Xinwei Deng',
+            'Yili Hong'],
+ 'link': ['https://arxiv.org/abs/2412.10331'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10331'],
+ 'primary_cat': ['stat.AP'],
+ 'title': ['Applied Statistics in the Era of Artificial Intelligence: A Review '
+           'and Vision']}
+2024-12-16 14:19:07,744 - root - INFO - paper: {'ID': ['2412.10321'],
+ 'abstract': ['Many jailbreak attacks on large language models (LLMs) rely on '
+              'a common objective: making the model respond with the prefix '
+              '"Sure, here is (harmful request)". While straightforward, this '
+              'objective has two limitations: limited control over model '
+              'behaviors, often resulting in incomplete or unrealistic '
+              'responses, and a rigid format that hinders optimization. To '
+              'address these limitations, we introduce AdvPrefix, a new '
+              'prefix-forcing objective that enables more nuanced control over '
+              'model behavior while being easy to optimize. Our objective '
+              'leverages model-dependent prefixes, automatically selected '
+              'based on two criteria: high prefilling attack success rates and '
+              'low negative log-likelihood. It can further simplify '
+              'optimization by using multiple prefixes for a single user '
+              'request. AdvPrefix can integrate seamlessly into existing '
+              'jailbreak attacks to improve their performance for free. For '
+              "example, simply replacing GCG attack's target prefixes with "
+              'ours on Llama-3 improves nuanced attack success rates from 14% '
+              'to 80%, suggesting that current alignment struggles to '
+              'generalize to unseen prefixes. Our work demonstrates the '
+              'importance of jailbreak objectives in achieving nuanced '
+              'jailbreaks.'],
+ 'author': ['Sicheng Zhu',
+            'Brandon Amos',
+            'Yuandong Tian',
+            'Chuan Guo',
+            'Ivan Evtimov'],
+ 'link': ['https://arxiv.org/abs/2412.10321'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10321'],
+ 'primary_cat': ['cs.LG'],
+ 'title': ['AdvPrefix: An Objective for Nuanced LLM Jailbreaks']}
+2024-12-16 14:19:07,745 - root - INFO - paper: {'ID': ['2412.10320'],
+ 'abstract': ['We study a path planning problem where the possible move '
+              'actions are represented as a finite set of motion primitives '
+              'aligned with the grid representation of the environment. That '
+              'is, each primitive corresponds to a short '
+              'kinodynamically-feasible motion of an agent and is represented '
+              'as a sequence of the swept cells of a grid. Typically heuristic '
+              'search, i.e. A*, is conducted over the lattice induced by these '
+              'primitives (lattice-based planning) to find a path. However due '
+              'to the large branching factor such search may be inefficient in '
+              'practice. To this end we suggest a novel technique rooted in '
+              'the idea of searching over the grid cells (as in vanilla A*) '
+              'simultaneously fitting the possible sequences of the motion '
+              'primitives into these cells. The resultant algorithm, MeshA*, '
+              'provably preserves the guarantees on completeness and '
+              'optimality, on the one hand, and is shown to notably outperform '
+              'conventional lattice-based planning (x1.5 decrease in the '
+              'runtime), on the other hand. Moreover, we suggest an additional '
+              'pruning technique that additionally decreases the search space '
+              'of MeshA*. The resultant planner is combined with the regular '
+              'A* to retain completeness and is shown to further increase the '
+              'search performance at the cost of negligible decrease of the '
+              'solution quality.'],
+ 'author': ['Marat Agranovskiy', 'Konstantin Yakovlev'],
+ 'link': ['https://arxiv.org/abs/2412.10320'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10320'],
+ 'primary_cat': ['cs.RO'],
+ 'title': ['MeshA*: Efficient Path Planing With Motion Primitives']}
+2024-12-16 14:19:07,747 - root - INFO - paper: {'ID': ['2412.10319'],
+ 'abstract': ['Long-context LLMs have enabled numerous downstream applications '
+              'but also introduced significant challenges related to '
+              'computational and memory efficiency. To address these '
+              'challenges, optimizations for long-context inference have been '
+              'developed, centered around the KV cache. However, existing '
+              'benchmarks often evaluate in single-request, neglecting the '
+              'full lifecycle of the KV cache in real-world use. This '
+              'oversight is particularly critical, as KV cache reuse has '
+              'become widely adopted in LLMs inference frameworks, such as '
+              'vLLM and SGLang, as well as by LLM providers, including OpenAI, '
+              'Microsoft, Google, and Anthropic. To address this gap, we '
+              'introduce SCBench(SharedContextBench), a comprehensive '
+              'benchmark for evaluating long-context methods from a KV '
+              'cachecentric perspective: 1) KV cache generation, 2) KV cache '
+              'compression, 3) KV cache retrieval, 4) KV cache loading. '
+              'Specifically, SCBench uses test examples with shared context, '
+              'ranging 12 tasks with two shared context modes, covering four '
+              'categories of long-context capabilities: string retrieval, '
+              'semantic retrieval, global information, and multi-task. With '
+              'it, we provide an extensive KV cache-centric analysis of eight '
+              'categories long-context solutions, including Gated Linear RNNs, '
+              'Mamba-Attention hybrids, and efficient methods such as sparse '
+              'attention, KV cache dropping, quantization, retrieval, loading, '
+              'and prompt compression. The evaluation is conducted on 8 '
+              'long-context LLMs. Our findings show that sub-O(n) memory '
+              'methods suffer in multi-turn scenarios, while sparse encoding '
+              'with O(n) memory and sub-O(n^2) pre-filling computation perform '
+              'robustly. Dynamic sparsity yields more expressive KV caches '
+              'than static patterns, and layer-level sparsity in hybrid '
+              'architectures reduces memory usage with strong performance. '
+              'Additionally, we identify attention distribution shift issues '
+              'in long-generation scenarios. https://aka.ms/SCBench.'],
+ 'author': ['Yucheng Li',
+            'Huiqiang Jiang',
+            'Qianhui Wu',
+            'Xufang Luo',
+            'Surin Ahn',
+            'Chengruidong Zhang',
+            'Amir H. Abdi',
+            'Dongsheng Li',
+            'Jianfeng Gao',
+            'Yuqing Yang',
+            'Lili Qiu'],
+ 'link': ['https://arxiv.org/abs/2412.10319'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10319'],
+ 'primary_cat': ['cs.CL'],
+ 'title': ['SCBench: A KV Cache-Centric Analysis of Long-Context Methods']}
+2024-12-16 14:19:07,748 - root - INFO - paper: {'ID': ['2412.10317'],
+ 'abstract': ['Though exponential distributions are ubiquitous in statistical '
+              'physics and related computational models, directly sampling '
+              'them from device behavior is rarely done. The superparamagnetic '
+              'tunnel junction (SMTJ), a key device in probabilistic '
+              'computing, is known to naturally exhibit exponentially '
+              'distributed temporal switching dynamics. To sample an '
+              'exponential distribution with an SMTJ, we need to measure it in '
+              'the time domain, which is challenging with traditional '
+              'techniques that focus on sampling the instantaneous state of '
+              'the device. In this work, we leverage a temporal encoding '
+              'scheme, where information is encoded in the time at which the '
+              'device switches between its resistance states. We then develop '
+              'a circuit element known as a probabilistic delay cell that '
+              'applies an electrical current step to an SMTJ and a temporal '
+              'measurement circuit that measures the timing of the first '
+              'switching event. Repeated experiments confirm that these times '
+              'are exponentially distributed. Temporal processing methods then '
+              'allow us to digitally compute with these exponentially '
+              'distributed probabilistic delay cells. We describe how to use '
+              'these circuits in a Metropolis-Hastings stepper and in a '
+              'weighted random sampler, both of which are computationally '
+              'intensive applications that benefit from the efficient '
+              'generation of exponentially distributed random numbers.'],
+ 'author': ['Temitayo N. Adeyeye',
+            'Sidra Gibeault',
+            'Daniel P. Lathrop',
+            'Matthew W. Daniels',
+            'Mark D. Stiles',
+            'Jabez J. McClelland',
+            'William A. Borders',
+            'Jason T. Ryan',
+            'Philippe Talatchian',
+            'Ursula Ebels',
+            'Advait Madhavan'],
+ 'link': ['https://arxiv.org/abs/2412.10317'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10317'],
+ 'primary_cat': ['cs.ET'],
+ 'title': ['Sampling from exponential distributions in the time domain with '
+           'superparamagnetic tunnel junctions']}
+2024-12-16 14:19:07,750 - root - INFO - paper: {'ID': ['2412.10316'],
+ 'abstract': ['Image editing has advanced significantly with the development '
+              'of diffusion models using both inversion-based and '
+              'instruction-based methods. However, current inversion-based '
+              'approaches struggle with big modifications (e.g., adding or '
+              'removing objects) due to the structured nature of inversion '
+              'noise, which hinders substantial changes. Meanwhile, '
+              'instruction-based methods often constrain users to black-box '
+              'operations, limiting direct interaction for specifying editing '
+              'regions and intensity. To address these limitations, we propose '
+              'BrushEdit, a novel inpainting-based instruction-guided image '
+              'editing paradigm, which leverages multimodal large language '
+              'models (MLLMs) and image inpainting models to enable '
+              'autonomous, user-friendly, and interactive free-form '
+              'instruction editing. Specifically, we devise a system enabling '
+              'free-form instruction editing by integrating MLLMs and a '
+              'dual-branch image inpainting model in an agent-cooperative '
+              'framework to perform editing category classification, main '
+              'object identification, mask acquisition, and editing area '
+              'inpainting. Extensive experiments show that our framework '
+              'effectively combines MLLMs and inpainting models, achieving '
+              'superior performance across seven metrics including mask region '
+              'preservation and editing effect coherence.'],
+ 'author': ['Yaowei Li',
+            'Yuxuan Bian',
+            'Xuan Ju',
+            'Zhaoyang Zhang',
+            'Ying Shan',
+            'Qiang Xu'],
+ 'link': ['https://arxiv.org/abs/2412.10316'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10316'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['BrushEdit: All-In-One Image Inpainting and Editing']}
+2024-12-16 14:19:07,751 - root - INFO - paper: {'ID': ['2412.10313'],
+ 'abstract': ['Regulatory documents are rich in nuanced terminology and '
+              'specialized semantics. FRAG systems: Frozen retrieval-augmented '
+              'generators utilizing pre-trained (or, frozen) components face '
+              'consequent challenges with both retriever and answering '
+              'performance. We present a system that adapts the retriever '
+              'performance to the target domain using a multi-stage tuning '
+              '(MST) strategy. Our retrieval approach, called MST-R (a) first '
+              'fine-tunes encoders used in vector stores using hard negative '
+              'mining, (b) then uses a hybrid retriever, combining sparse and '
+              'dense retrievers using reciprocal rank fusion, and then (c) '
+              'adapts the cross-attention encoder by fine-tuning only the '
+              'top-k retrieved results. We benchmark the system performance on '
+              'the dataset released for the RIRAG challenge (as part of the '
+              'RegNLP workshop at COLING 2025). We achieve significant '
+              'performance gains obtaining a top rank on the RegNLP challenge '
+              'leaderboard. We also show that a trivial answering approach '
+              'games the RePASs metric outscoring all baselines and a '
+              'pre-trained Llama model. Analyzing this anomaly, we present '
+              'important takeaways for future research.'],
+ 'author': ['Yash Malviya', 'Karan Dhingra', 'Maneesh Singh'],
+ 'link': ['https://arxiv.org/abs/2412.10313'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10313'],
+ 'primary_cat': ['cs.IR'],
+ 'title': ['MST-R: Multi-Stage Tuning for Retrieval Systems and Metric '
+           'Evaluation']}
+2024-12-16 14:19:07,752 - root - INFO - paper: {'ID': ['2412.10312'],
+ 'abstract': ['A popular end-to-end architecture for selective rationalization '
+              'is the select-then-predict pipeline, comprising a generator to '
+              'extract highlights fed to a predictor. Such a cooperative '
+              'system suffers from suboptimal equilibrium minima due to the '
+              'dominance of one of the two modules, a phenomenon known as '
+              'interlocking. While several contributions aimed at addressing '
+              'interlocking, they only mitigate its effect, often by '
+              'introducing feature-based heuristics, sampling, and ad-hoc '
+              'regularizations. We present GenSPP, the first interlocking-free '
+              'architecture for selective rationalization that does not '
+              'require any learning overhead, as the above-mentioned. GenSPP '
+              'avoids interlocking by performing disjoint training of the '
+              'generator and predictor via genetic global search. Experiments '
+              'on a synthetic and a real-world benchmark show that our model '
+              'outperforms several state-of-the-art competitors.'],
+ 'author': ['Federico Ruggeri', 'Gaetano Signorelli'],
+ 'link': ['https://arxiv.org/abs/2412.10312'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10312'],
+ 'primary_cat': ['cs.LG'],
+ 'title': ['Interlocking-free Selective Rationalization Through Genetic-based '
+           'Learning']}
+2024-12-16 14:19:07,753 - root - INFO - paper: {'ID': ['2412.10308'],
+ 'abstract': ['We tackle the problem of localizing the traffic surveillance '
+              'cameras in cooperative perception. To overcome the lack of '
+              'large-scale real-world intersection datasets, we introduce '
+              'Carla Intersection, a new simulated dataset with 75 urban and '
+              'rural intersections in Carla. Moreover, we introduce a novel '
+              'neural network, TrafficLoc, localizing traffic cameras within a '
+              '3D reference map. TrafficLoc employs a coarse-to-fine matching '
+              'pipeline. For image-point cloud feature fusion, we propose a '
+              'novel Geometry-guided Attention Loss to address cross-modal '
+              'viewpoint inconsistencies. During coarse matching, we propose '
+              'an Inter-Intra Contrastive Learning to achieve precise '
+              'alignment while preserving distinctiveness among local '
+              'intra-features within image patch-point group pairs. Besides, '
+              'we introduce Dense Training Alignment with a soft-argmax '
+              'operator to consider additional features when regressing the '
+              'final position. Extensive experiments show that our TrafficLoc '
+              'improves the localization accuracy over the state-of-the-art '
+              'Image-to-point cloud registration methods by a large margin (up '
+              'to 86%) on Carla Intersection and generalizes well to '
+              'real-world data. TrafficLoc also achieves new SOTA performance '
+              'on KITTI and NuScenes datasets, demonstrating strong '
+              'localization ability across both in-vehicle and traffic '
+              'cameras. Our project page is publicly available at '
+              'https://tum-luk.github.io/projects/trafficloc/.'],
+ 'author': ['Yan Xia',
+            'Yunxiang Lu',
+            'Rui Song',
+            'Oussema Dhaouadi',
+            'João F. Henriques',
+            'Daniel Cremers'],
+ 'link': ['https://arxiv.org/abs/2412.10308'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10308'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['TrafficLoc: Localizing Traffic Surveillance Cameras in 3D Scenes']}
+2024-12-16 14:19:07,754 - root - INFO - paper: {'ID': ['2412.10307'],
+ 'abstract': ['Anti-unification is a fundamental operation used for inductive '
+              'inference. It is abstractly defined as a process deriving from '
+              'a set of symbolic expressions a new symbolic expression '
+              'possessing certain commonalities shared between its members. We '
+              'consider anti-unification over term algebras where some '
+              'function symbols are interpreted as associative-idempotent '
+              '($f(x,f(y,z)) = f(f(x,y),z)$ and $f(x,x)=x$, respectively) and '
+              'show that there exists generalization problems for which a '
+              'minimal complete set of solutions does not exist (Nullary), '
+              'that is every complete set must contain comparable elements '
+              'with respect to the generality relation. In contrast to earlier '
+              'techniques for showing the nullarity of a generalization '
+              'problem, we exploit combinatorial properties of complete sets '
+              'of solutions to show that comparable elements are not '
+              'avoidable. We show that every complete set of solutions '
+              'contains an infinite chain of comparable generalizations whose '
+              'structure is isomorphic to a subsequence of an infinite '
+              'square-free sequence over three symbols.'],
+ 'author': ['David M. Cerna'],
+ 'link': ['https://arxiv.org/abs/2412.10307'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10307'],
+ 'primary_cat': ['cs.LO'],
+ 'title': ['A Note On Square-free Sequences and Anti-unification Type']}
+2024-12-16 14:19:07,763 - root - INFO - paper: {'ID': ['2412.10302'],
+ 'abstract': ['We present DeepSeek-VL2, an advanced series of large '
+              'Mixture-of-Experts (MoE) Vision-Language Models that '
+              'significantly improves upon its predecessor, DeepSeek-VL, '
+              'through two key major upgrades. For the vision component, we '
+              'incorporate a dynamic tiling vision encoding strategy designed '
+              'for processing high-resolution images with different aspect '
+              'ratios. For the language component, we leverage DeepSeekMoE '
+              'models with the Multi-head Latent Attention mechanism, which '
+              'compresses Key-Value cache into latent vectors, to enable '
+              'efficient inference and high throughput. Trained on an improved '
+              'vision-language dataset, DeepSeek-VL2 demonstrates superior '
+              'capabilities across various tasks, including but not limited to '
+              'visual question answering, optical character recognition, '
+              'document/table/chart understanding, and visual grounding. Our '
+              'model series is composed of three variants: DeepSeek-VL2-Tiny, '
+              'DeepSeek-VL2-Small and DeepSeek-VL2, with 1.0B, 2.8B and 4.5B '
+              'activated parameters respectively. DeepSeek-VL2 achieves '
+              'competitive or state-of-the-art performance with similar or '
+              'fewer activated parameters compared to existing open-source '
+              'dense and MoE-based models. Codes and pre-trained models are '
+              'publicly accessible at '
+              'https://github.com/deepseek-ai/DeepSeek-VL2.'],
+ 'author': ['Zhiyu Wu',
+            'Xiaokang Chen',
+            'Zizheng Pan',
+            'Xingchao Liu',
+            'Wen Liu',
+            'Damai Dai',
+            'Huazuo Gao',
+            'Yiyang Ma',
+            'Chengyue Wu',
+            'Bingxuan Wang',
+            'Zhenda Xie',
+            'Yu Wu',
+            'Kai Hu',
+            'Jiawei Wang',
+            'Yaofeng Sun',
+            'Yukun Li',
+            'Yishi Piao',
+            'Kang Guan',
+            'Aixin Liu',
+            'Xin Xie',
+            'Yuxiang You',
+            'Kai Dong',
+            'Xingkai Yu',
+            'Haowei Zhang',
+            'Liang Zhao'],
+ 'link': ['https://arxiv.org/abs/2412.10302'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10302'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['DeepSeek-VL2: Mixture-of-Experts Vision-Language Models for '
+           'Advanced Multimodal Understanding']}
+2024-12-16 14:19:07,764 - root - INFO - paper: {'ID': ['2412.10300'],
+ 'abstract': ['Active imaging systems sample the Transient Light Transport '
+              'Matrix (TLTM) for a scene by sequentially illuminating various '
+              'positions in this scene using a controllable light source, and '
+              'then measuring the resulting spatiotemporal light transport '
+              'with time of flight (ToF) sensors. Time-resolved '
+              'Non-line-of-sight (NLOS) imaging employs an active imaging '
+              'system that measures part of the TLTM of an intermediary relay '
+              'surface, and uses the indirect reflections of light encoded '
+              'within this TLTM to "see around corners". Such imaging systems '
+              'have applications in diverse areas such as disaster response, '
+              'remote surveillance, and autonomous navigation. While existing '
+              'NLOS imaging systems usually measure a subset of the full TLTM, '
+              'development of customized gated Single Photon Avalanche Diode '
+              '(SPAD) arrays \\cite{riccardo_fast-gated_2022} has made it '
+              'feasible to probe the full measurement space. In this work, we '
+              'demonstrate that the full TLTM on the relay surface can be '
+              'processed with efficient algorithms to computationally focus '
+              'and detect our illumination in different parts of the hidden '
+              'scene, turning the relay surface into a second-order active '
+              'imaging system. These algorithms allow us to iterate on the '
+              'measured, first-order TLTM, and extract a \\textbf{second order '
+              'TLTM for surfaces in the hidden scene}. We showcase three '
+              'applications of TLTMs in NLOS imaging: (1) Scene Relighting '
+              'with novel illumination, (2) Separation of direct and indirect '
+              'components of light transport in the hidden scene, and (3) Dual '
+              'Photography. Additionally, we empirically demonstrate that SPAD '
+              'arrays enable parallel acquisition of photons, effectively '
+              'mitigating long acquisition times.'],
+ 'author': ['Talha Sultan',
+            'Eric Brandt',
+            'Khadijeh Masumnia-Bisheh',
+            'Simone Riccardo',
+            'Pavel Polynkin',
+            'Alberto Tosi',
+            'Andreas Velten'],
+ 'link': ['https://arxiv.org/abs/2412.10300'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10300'],
+ 'primary_cat': ['physics.optics'],
+ 'title': ['Iterating the Transient Light Transport Matrix for '
+           'Non-Line-of-Sight Imaging']}
+2024-12-16 14:19:07,765 - root - INFO - paper: {'ID': ['2412.10298'],
+ 'abstract': ['Accurately predicting sports viewership is crucial for '
+              'optimizing ad sales and revenue forecasting. Social media '
+              'platforms, such as Reddit, provide a wealth of user-generated '
+              'content that reflects audience engagement and interest. In this '
+              'study, we propose a regression-based approach to predict sports '
+              'viewership using social media metrics, including post counts, '
+              'comments, scores, and sentiment analysis from TextBlob and '
+              'VADER. Through iterative improvements, such as focusing on '
+              'major sports subreddits, incorporating categorical features, '
+              'and handling outliers by sport, the model achieved an $R^2$ of '
+              '0.99, a Mean Absolute Error (MAE) of 1.27 million viewers, and '
+              'a Root Mean Squared Error (RMSE) of 2.33 million viewers on the '
+              "full dataset. These results demonstrate the model's ability to "
+              'accurately capture patterns in audience behavior, offering '
+              'significant potential for pre-event revenue forecasting and '
+              'targeted advertising strategies.'],
+ 'author': ['Anakin Trotter'],
+ 'link': ['https://arxiv.org/abs/2412.10298'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10298'],
+ 'primary_cat': ['cs.LG'],
+ 'title': ['Buzz to Broadcast: Predicting Sports Viewership Using Social Media '
+           'Engagement']}
+2024-12-16 14:19:07,766 - root - INFO - paper: {'ID': ['2412.10294'],
+ 'abstract': ['We present a novel diffusion-based approach for coherent 3D '
+              'scene reconstruction from a single RGB image. Our method '
+              'utilizes an image-conditioned 3D scene diffusion model to '
+              'simultaneously denoise the 3D poses and geometries of all '
+              'objects within the scene. Motivated by the ill-posed nature of '
+              'the task and to obtain consistent scene reconstruction results, '
+              'we learn a generative scene prior by conditioning on all scene '
+              'objects simultaneously to capture the scene context and by '
+              'allowing the model to learn inter-object relationships '
+              'throughout the diffusion process. We further propose an '
+              'efficient surface alignment loss to facilitate training even in '
+              'the absence of full ground-truth annotation, which is common in '
+              'publicly available datasets. This loss leverages an expressive '
+              'shape representation, which enables direct point sampling from '
+              'intermediate shape predictions. By framing the task of single '
+              'RGB image 3D scene reconstruction as a conditional diffusion '
+              'process, our approach surpasses current state-of-the-art '
+              'methods, achieving a 12.04% improvement in AP3D on SUN RGB-D '
+              'and a 13.43% increase in F-Score on Pix3D.'],
+ 'author': ['Manuel Dahnert',
+            'Angela Dai',
+            'Norman Müller',
+            'Matthias Nießner'],
+ 'link': ['https://arxiv.org/abs/2412.10294'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10294'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['Coherent 3D Scene Diffusion From a Single RGB Image']}
+2024-12-16 14:19:07,767 - root - INFO - paper: {'ID': ['2412.10292'],
+ 'abstract': ['We tackle the challenge of open-vocabulary segmentation, where '
+              'we need to identify objects from a wide range of categories in '
+              'different environments, using text prompts as our input. To '
+              'overcome this challenge, existing methods often use multi-modal '
+              'models like CLIP, which combine image and text features in a '
+              'shared embedding space to bridge the gap between limited and '
+              'extensive vocabulary recognition, resulting in a two-stage '
+              'approach: In the first stage, a mask generator takes an input '
+              'image to generate mask proposals, and the in the second stage '
+              'the target mask is picked based on the query. However, the '
+              'expected target mask may not exist in the generated mask '
+              'proposals, which leads to an unexpected output mask. In our '
+              'work, we propose a novel approach named Prompt-guided Mask '
+              'Proposal (PMP) where the mask generator takes the input text '
+              'prompts and generates masks guided by these prompts. Compared '
+              'with mask proposals generated without input prompts, masks '
+              'generated by PMP are better aligned with the input prompts. To '
+              'realize PMP, we designed a cross-attention mechanism between '
+              'text tokens and query tokens which is capable of generating '
+              'prompt-guided mask proposals after each decoding. We combined '
+              'our PMP with several existing works employing a query-based '
+              'segmentation backbone and the experiments on five benchmark '
+              'datasets demonstrate the effectiveness of this approach, '
+              'showcasing significant improvements over the current two-stage '
+              'models (1% ~ 3% absolute performance gain in terms of mIOU). '
+              'The steady improvement in performance across these benchmarks '
+              'indicates the effective generalization of our proposed '
+              'lightweight prompt-aware method.'],
+ 'author': ['Yu-Jhe Li',
+            'Xinyang Zhang',
+            'Kun Wan',
+            'Lantao Yu',
+            'Ajinkya Kale',
+            'Xin Lu'],
+ 'link': ['https://arxiv.org/abs/2412.10292'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10292'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['Prompt-Guided Mask Proposal for Two-Stage Open-Vocabulary '
+           'Segmentation']}
+2024-12-16 14:19:07,768 - root - INFO - paper: {'ID': ['2412.10291'],
+ 'abstract': ['My paper "Talking About Large Language Models" has more than '
+              'once been interpreted as advocating a reductionist stance '
+              'towards large language models. But the paper was not intended '
+              'that way, and I do not endorse such positions. This short note '
+              'situates the paper in the context of a larger philosophical '
+              'project that is concerned with the (mis)use of words rather '
+              "than metaphysics, in the spirit of Wittgenstein's later "
+              'writing.'],
+ 'author': ['Murray Shanahan'],
+ 'link': ['https://arxiv.org/abs/2412.10291'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10291'],
+ 'primary_cat': ['cs.CL'],
+ 'title': ['Still "Talking About Large Language Models": Some Clarifications']}
+2024-12-16 14:19:07,769 - root - INFO - paper: {'ID': ['2412.10289'],
+ 'abstract': ['Hardware accelerators like quantum annealers or neuromorphic '
+              'chips are capable of finding the ground state of a Hamiltonian. '
+              'A promising route in utilizing these devices is via methods '
+              'from automated reasoning: The problem at hand is first encoded '
+              'into MaxSAT; then MaxSAT is reduced to Max2SAT; and finally, '
+              'Max2SAT is translated into a Hamiltonian. It was observed that '
+              'different encodings can dramatically affect the efficiency of '
+              'the hardware accelerators. Yet, previous studies were only '
+              'concerned with the size of the encodings rather than with '
+              'syntactic or structural properties.\n'
+              '  We establish structure-aware reductions between MaxSAT, '
+              'Max2SAT, and the quadratic unconstrained binary optimization '
+              'problem (QUBO) that underlies such hardware accelerators. All '
+              'these problems turn out to be equivalent under linear-time, '
+              'treewidth-preserving reductions. As a consequence, we obtain '
+              'tight lower bounds under ETH and SETH for Max2SAT and QUBO, as '
+              'well as a new time-optimal fixed-parameter algorithm for QUBO. '
+              'While our results are tight up to a constant additive factor '
+              'for the primal treewidth, we require a constant multiplicative '
+              'factor for the incidence treewidth. To close the emerging gap, '
+              'we supplement our results with novel time-optimal algorithms '
+              'for fragments of MaxSAT based on model counting.'],
+ 'author': ['Max Bannach', 'Jai Grover', 'Markus Hecher'],
+ 'link': ['https://arxiv.org/abs/2412.10289'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10289'],
+ 'primary_cat': ['cs.LO'],
+ 'title': ['Strong Structural Bounds for MaxSAT: The Fine Details of Using '
+           'Neuromorphic and Quantum Hardware Accelerators']}
+2024-12-16 14:19:07,771 - root - INFO - paper: {'ID': ['2412.10288'],
+ 'abstract': ['A myriad of measures to illustrate performance of predictive '
+              'artificial intelligence (AI) models have been proposed in the '
+              'literature. Selecting appropriate performance measures is '
+              'essential for predictive AI models that are developed to be '
+              'used in medical practice, because poorly performing models may '
+              'harm patients and lead to increased costs. We aim to assess the '
+              'merits of classic and contemporary performance measures when '
+              'validating predictive AI models for use in medical practice. We '
+              'focus on models with a binary outcome. We discuss 32 '
+              'performance measures covering five performance domains '
+              '(discrimination, calibration, overall, classification, and '
+              'clinical utility) along with accompanying graphical '
+              'assessments. The first four domains cover statistical '
+              'performance, the fifth domain covers decision-analytic '
+              'performance. We explain why two key characteristics are '
+              'important when selecting which performance measures to assess: '
+              "(1) whether the measure's expected value is optimized when it "
+              'is calculated using the correct probabilities (i.e., a "proper" '
+              'measure), and (2) whether they reflect either purely '
+              'statistical performance or decision-analytic performance by '
+              'properly considering misclassification costs. Seventeen '
+              'measures exhibit both characteristics, fourteen measures '
+              'exhibited one characteristic, and one measure possessed neither '
+              'characteristic (the F1 measure). All classification measures '
+              '(such as classification accuracy and F1) are improper for '
+              'clinically relevant decision thresholds other than 0.5 or the '
+              'prevalence. We recommend the following measures and plots as '
+              'essential to report: AUROC, calibration plot, a clinical '
+              'utility measure such as net benefit with decision curve '
+              'analysis, and a plot with probability distributions per outcome '
+              'category.'],
+ 'author': ['Ben Van Calster',
+            'Gary S. Collins',
+            'Andrew J. Vickers',
+            'Laure Wynants',
+            'Kathleen F. Kerr',
+            'Lasai Barreñada',
+            'Gael Varoquaux',
+            'Karandeep Singh',
+            'Karel G. M. Moons',
+            'Tina Hernandez-boussard',
+            'Dirk Timmerman',
+            'David J. Mclernon',
+            'Maarten Van Smeden',
+            'Ewout W. Steyerberg'],
+ 'link': ['https://arxiv.org/abs/2412.10288'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10288'],
+ 'primary_cat': ['cs.LG'],
+ 'title': ['Performance evaluation of predictive AI models to support medical '
+           'decisions: Overview and guidance']}
+2024-12-16 14:19:07,772 - root - INFO - paper: {'ID': ['2412.10287'],
+ 'abstract': ['A given edge-labelled graph two-way regular path queries '
+              '(2-RPQs) allow one to use regular languages over labelled edges '
+              'and inverted edges to constraint paths of interest. 2-RPQs are '
+              '(partially) adopted in different real-world graph analysis '
+              'systems and are a part of the GQL ISO standard. But the '
+              'performance of 2-RPQs on real-world graphs is still a '
+              'bottleneck for wider adoption. A new single-source 2-RPQ '
+              'algorithm based on linear algebra is proposed. Utilization of '
+              'high-performance sparse linear algebra libraries for the '
+              'algorithm implementation allows one to achieve significant '
+              'speedup over competitors on real-world data and queries. Our '
+              'implementation demonstrates better performance on average on '
+              'Wikidata and the respective query log in comparison with '
+              'MillenniumDB, FalkorDB, and the algorithm of Diego Arroyuelo et '
+              'al.'],
+ 'author': ['Georgiy Belyanin', 'Semyon Grigoriev'],
+ 'link': ['https://arxiv.org/abs/2412.10287'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10287'],
+ 'primary_cat': ['cs.DS'],
+ 'title': ['Single-Source Regular Path Querying in Terms of Linear Algebra']}
+2024-12-16 14:19:07,778 - root - INFO - paper: {'ID': ['2412.10283'],
+ 'abstract': ['Middleware, third-party software intermediaries between users '
+              'and platforms, has been broached as a means to decentralize the '
+              'power of social media platforms and enhance user agency. '
+              'Middleware may enable a more user-centric and democratic '
+              'approach to shaping digital experiences, offering a flexible '
+              'architecture as an alternative to both centrally controlled, '
+              'opaque platforms and an unmoderated, uncurated internet. The '
+              'widespread adoption of open middleware has long hinged on the '
+              'cooperation of established major platforms; however, the recent '
+              'growth of federated platforms, such as Mastodon and Bluesky, '
+              'has led to increased offerings and user awareness. In this '
+              'report we consider the potential of middleware as a means of '
+              'enabling greater user control over curation and moderation - '
+              'two aspects of the social media experience that are often mired '
+              'in controversy. We evaluate the trade-offs and negative '
+              'externalities it might create, and discuss the technological, '
+              'regulatory, and market dynamics that could either support or '
+              'hinder its implementation.'],
+ 'author': ['Luke Hogg',
+            'Renée DiResta',
+            'Francis Fukuyama',
+            'Richard Reisman',
+            'Daphne Keller',
+            'Aviv Ovadya',
+            'Luke Thorburn',
+            'Jonathan Stray',
+            'Shubhi Mathur'],
+ 'link': ['https://arxiv.org/abs/2412.10283'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10283'],
+ 'primary_cat': ['cs.CY'],
+ 'title': ['Shaping the Future of Social Media with Middleware']}
+2024-12-16 14:19:07,779 - root - INFO - paper: {'ID': ['2412.10281'],
+ 'abstract': ['As large language models (LLMs) are shaping the way information '
+              'is shared and accessed online, their opinions have the '
+              'potential to influence a wide audience. This study examines who '
+              'the LLMs view as the most prominent figures across various '
+              'fields, using prompts in ten different languages to explore the '
+              'influence of linguistic diversity. Our findings reveal low '
+              'diversity in responses, with a small number of figures '
+              'dominating recognition across languages (also known as the '
+              '"superstar effect"). These results highlight the risk of '
+              'narrowing global knowledge representation when LLMs retrieve '
+              'subjective information.'],
+ 'author': ['Sofie Goethals', 'Lauren Rhue'],
+ 'link': ['https://arxiv.org/abs/2412.10281'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10281'],
+ 'primary_cat': ['cs.CL'],
+ 'title': ['One world, one opinion? The superstar effect in LLM responses']}
+2024-12-16 14:19:07,781 - root - INFO - paper: {'ID': ['2412.10278'],
+ 'abstract': ['This is a report of an NSF workshop titled "Envisioning '
+              'National Resources for Artificial Intelligence Research" held '
+              'in Alexandria, Virginia, in May 2024. The workshop aimed to '
+              'identify initial challenges and opportunities for national '
+              'resources for AI research (e.g., compute, data, models, etc.) '
+              'and to facilitate planning for the envisioned National AI '
+              'Research Resource. Participants included AI and '
+              'cyberinfrastructure (CI) experts. The report outlines '
+              'significant findings and identifies needs and recommendations '
+              'from the workshop.'],
+ 'author': ['Shantenu Jha', 'Yolanda Gil'],
+ 'link': ['https://arxiv.org/abs/2412.10278'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10278'],
+ 'primary_cat': ['cs.AI'],
+ 'title': ['Envisioning National Resources for Artificial Intelligence '
+           'Research: NSF Workshop Report']}
+2024-12-16 14:19:07,782 - root - INFO - paper: {'ID': ['2412.10275'],
+ 'abstract': ['Text-driven Image to Video Generation (TI2V) aims to generate '
+              'controllable video given the first frame and corresponding '
+              'textual description. The primary challenges of this task lie in '
+              'two parts: (i) how to identify the target objects and ensure '
+              'the consistency between the movement trajectory and the textual '
+              'description. (ii) how to improve the subjective quality of '
+              'generated videos. To tackle the above challenges, we propose a '
+              'new diffusion-based TI2V framework, termed TIV-Diffusion, via '
+              'object-centric textual-visual alignment, intending to achieve '
+              'precise control and high-quality video generation based on '
+              'textual-described motion for different objects. Concretely, we '
+              'enable our TIV-Diffuion model to perceive the textual-described '
+              'objects and their motion trajectory by incorporating the fused '
+              'textual and visual knowledge through scale-offset modulation. '
+              'Moreover, to mitigate the problems of object disappearance and '
+              'misaligned objects and motion, we introduce an object-centric '
+              'textual-visual alignment module, which reduces the risk of '
+              'misaligned objects/motion by decoupling the objects in the '
+              'reference image and aligning textual features with each object '
+              'individually. Based on the above innovations, our TIV-Diffusion '
+              'achieves state-of-the-art high-quality video generation '
+              'compared with existing TI2V methods.'],
+ 'author': ['Xingrui Wang',
+            'Xin Li',
+            'Yaosi Hu',
+            'Hanxin Zhu',
+            'Chen Hou',
+            'Cuiling Lan',
+            'Zhibo Chen'],
+ 'link': ['https://arxiv.org/abs/2412.10275'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10275'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['TIV-Diffusion: Towards Object-Centric Movement for Text-driven '
+           'Image to Video Generation']}
+2024-12-16 14:19:07,783 - root - INFO - paper: {'ID': ['2412.10273'],
+ 'abstract': ['We introduce a hierarchical probabilistic approach to go from a '
+              '2D image to multiview 3D: a diffusion "prior" models the unseen '
+              '3D geometry, which then conditions a diffusion "decoder" to '
+              'generate novel views of the subject. We use a pointmap-based '
+              'geometric representation in a multiview image format to '
+              'coordinate the generation of multiple target views '
+              'simultaneously. We facilitate correspondence between views by '
+              'assuming fixed target camera poses relative to the source '
+              'camera, and constructing a predictable distribution of '
+              'geometric features per target. Our modular, geometry-driven '
+              'approach to novel-view synthesis (called "unPIC") beats SoTA '
+              'baselines such as CAT3D and One-2-3-45 on held-out objects from '
+              'ObjaverseXL, as well as real-world objects ranging from Google '
+              'Scanned Objects, Amazon Berkeley Objects, to the Digital Twin '
+              'Catalog.'],
+ 'author': ['Rishabh Kabra',
+            'Drew A. Hudson',
+            'Sjoerd van Steenkiste',
+            'Joao Carreira',
+            'Niloy J. Mitra'],
+ 'link': ['https://arxiv.org/abs/2412.10273'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10273'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['Probabilistic Inverse Cameras: Image to 3D via Multiview Geometry']}
+2024-12-16 14:19:07,784 - root - INFO - paper: {'ID': ['2412.10272'],
+ 'abstract': ['In industrial contexts, effective workforce allocation is '
+              'crucial for operational efficiency. This paper presents an '
+              'ongoing project focused on developing a decision-making tool '
+              'designed for workforce allocation, emphasising the '
+              'explainability to enhance its trustworthiness. Our objective is '
+              'to create a system that not only optimises the allocation of '
+              'teams to scheduled tasks but also provides clear, '
+              'understandable explanations for its decisions, particularly in '
+              'cases where the problem is infeasible. By incorporating '
+              'human-in-the-loop mechanisms, the tool aims to enhance user '
+              'trust and facilitate interactive conflict resolution. We '
+              'implemented our approach on a prototype tool/digital '
+              'demonstrator intended to be evaluated on a real industrial '
+              'scenario both in terms of performance and user acceptability.'],
+ 'author': ['Guillaume Povéda',
+            'Ryma Boumazouza',
+            'Andreas Strahl',
+            'Mark Hall',
+            'Santiago Quintana-Amate',
+            'Nahum Alvarez',
+            'Ignace Bleukx',
+            'Dimos Tsouros',
+            'Hélène Verhaeghe',
+            'Tias Guns'],
+ 'link': ['https://arxiv.org/abs/2412.10272'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10272'],
+ 'primary_cat': ['cs.AI'],
+ 'title': ['Trustworthy and Explainable Decision-Making for Workforce '
+           'allocation']}
+2024-12-16 14:19:07,785 - root - INFO - paper: {'ID': ['2412.10271'],
+ 'abstract': ['The development and evaluation of Large Language Models (LLMs) '
+              'has primarily focused on their task-solving capabilities, with '
+              'recent models even surpassing human performance in some areas. '
+              'However, this focus often neglects whether machine-generated '
+              'language matches the human level of diversity, in terms of '
+              'vocabulary choice, syntactic construction, and expression of '
+              'meaning, raising questions about whether the fundamentals of '
+              'language generation have been fully addressed. This paper '
+              'emphasizes the importance of examining the preservation of '
+              'human linguistic richness by language models, given the '
+              'concerning surge in online content produced or aided by LLMs. '
+              'We propose a comprehensive framework for evaluating LLMs from '
+              'various linguistic diversity perspectives including lexical, '
+              'syntactic, and semantic dimensions. Using this framework, we '
+              'benchmark several state-of-the-art LLMs across all diversity '
+              'dimensions, and conduct an in-depth case study for syntactic '
+              'diversity. Finally, we analyze how different development and '
+              'deployment choices impact the linguistic diversity of LLM '
+              'outputs.'],
+ 'author': ['Yanzhu Guo', 'Guokan Shang', 'Chloé Clavel'],
+ 'link': ['https://arxiv.org/abs/2412.10271'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10271'],
+ 'primary_cat': ['cs.CL'],
+ 'title': ['Benchmarking Linguistic Diversity of Large Language Models']}
+2024-12-16 14:19:07,786 - root - INFO - paper: {'ID': ['2412.10270'],
+ 'abstract': ['Large language models (LLMs) provide a compelling foundation '
+              'for building generally-capable AI agents. These agents may soon '
+              'be deployed at scale in the real world, representing the '
+              'interests of individual humans (e.g., AI assistants) or groups '
+              'of humans (e.g., AI-accelerated corporations). At present, '
+              'relatively little is known about the dynamics of multiple LLM '
+              'agents interacting over many generations of iterative '
+              'deployment. In this paper, we examine whether a "society" of '
+              'LLM agents can learn mutually beneficial social norms in the '
+              'face of incentives to defect, a distinctive feature of human '
+              'sociality that is arguably crucial to the success of '
+              'civilization. In particular, we study the evolution of indirect '
+              'reciprocity across generations of LLM agents playing a classic '
+              'iterated Donor Game in which agents can observe the recent '
+              'behavior of their peers. We find that the evolution of '
+              'cooperation differs markedly across base models, with societies '
+              'of Claude 3.5 Sonnet agents achieving significantly higher '
+              'average scores than Gemini 1.5 Flash, which, in turn, '
+              'outperforms GPT-4o. Further, Claude 3.5 Sonnet can make use of '
+              'an additional mechanism for costly punishment to achieve yet '
+              'higher scores, while Gemini 1.5 Flash and GPT-4o fail to do so. '
+              'For each model class, we also observe variation in emergent '
+              'behavior across random seeds, suggesting an understudied '
+              'sensitive dependence on initial conditions. We suggest that our '
+              'evaluation regime could inspire an inexpensive and informative '
+              'new class of LLM benchmarks, focussed on the implications of '
+              'LLM agent deployment for the cooperative infrastructure of '
+              'society.'],
+ 'author': ['Aron Vallinder', 'Edward Hughes'],
+ 'link': ['https://arxiv.org/abs/2412.10270'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10270'],
+ 'primary_cat': ['cs.MA'],
+ 'title': ['Cultural Evolution of Cooperation among LLM Agents']}
+2024-12-16 14:19:07,787 - root - INFO - paper: {'ID': ['2412.10267'],
+ 'abstract': ['The role of multiple-choice questions (MCQs) as effective '
+              'learning tools has been debated in past research. While MCQs '
+              'are widely used due to their ease in grading, open response '
+              'questions are increasingly used for instruction, given advances '
+              'in large language models (LLMs) for automated grading. This '
+              'study evaluates MCQs effectiveness relative to open-response '
+              'questions, both individually and in combination, on learning. '
+              'These activities are embedded within six tutor lessons on '
+              'advocacy. Using a posttest-only randomized control design, we '
+              'compare the performance of 234 tutors (790 lesson completions) '
+              'across three conditions: MCQ only, open response only, and a '
+              'combination of both. We find no significant learning '
+              'differences across conditions at posttest, but tutors in the '
+              'MCQ condition took significantly less time to complete '
+              'instruction. These findings suggest that MCQs are as effective, '
+              'and more efficient, than open response tasks for learning when '
+              'practice time is limited. To further enhance efficiency, we '
+              'autograded open responses using GPT-4o and GPT-4-turbo. GPT '
+              'models demonstrate proficiency for purposes of low-stakes '
+              'assessment, though further research is needed for broader use. '
+              'This study contributes a dataset of lesson log data, human '
+              'annotation rubrics, and LLM prompts to promote transparency and '
+              'reproducibility.'],
+ 'author': ['Danielle R. Thomas',
+            'Conrad Borchers',
+            'Sanjit Kakarla',
+            'Jionghao Lin',
+            'Shambhavi Bhushan',
+            'Boyuan Guo',
+            'Erin Gatz',
+            'Kenneth R. Koedinger'],
+ 'link': ['https://arxiv.org/abs/2412.10267'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10267'],
+ 'primary_cat': ['cs.HC'],
+ 'title': ['Does Multiple Choice Have a Future in the Age of Generative AI? A '
+           'Posttest-only RCT']}
+2024-12-16 14:19:07,788 - root - INFO - paper: {'ID': ['2412.10266'],
+ 'abstract': ['Stance detection is crucial for fostering a human-centric Web '
+              'by analyzing user-generated content to identify biases and '
+              'harmful narratives that undermine trust. With the development '
+              'of Large Language Models (LLMs), existing approaches treat '
+              'stance detection as a classification problem, providing robust '
+              'methodologies for modeling complex group interactions and '
+              'advancing capabilities in natural language tasks. However, '
+              'these methods often lack interpretability, limiting their '
+              'ability to offer transparent and understandable justifications '
+              'for predictions. This study adopts a generative approach, where '
+              'stance predictions include explicit, interpretable rationales, '
+              'and integrates them into smaller language models through '
+              'single-task and multitask learning. We find that incorporating '
+              'reasoning into stance detection enables the smaller model '
+              "(FlanT5) to outperform GPT-3.5's zero-shot performance, "
+              'achieving an improvement of up to 9.57%. Moreover, our results '
+              'show that reasoning capabilities enhance multitask learning '
+              'performance but may reduce effectiveness in single-task '
+              'settings. Crucially, we demonstrate that faithful rationales '
+              'improve rationale distillation into SLMs, advancing efforts to '
+              'build interpretable, trustworthy systems for addressing '
+              'discrimination, fostering trust, and promoting equitable '
+              'engagement on social media.'],
+ 'author': ['Jiaqing Yuan', 'Ruijie Xi', 'Munindar P. Singh'],
+ 'link': ['https://arxiv.org/abs/2412.10266'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10266'],
+ 'primary_cat': ['cs.CL'],
+ 'title': ['Reasoner Outperforms: Generative Stance Detection with '
+           'Rationalization for Social Media']}
+2024-12-16 14:19:09,229 - scrapy.core.engine - DEBUG - Crawled (200) <GET https://arxiv.org/abs/2412.10373> (referer: https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=&terms-0-field=title&classification-computer_science=y&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=2024-12-13&date-to_date=2024-12-16&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first)
+2024-12-16 14:19:09,364 - scrapy.core.scraper - DEBUG - Scraped from <200 https://arxiv.org/abs/2412.10373>
+{'ID': ['2412.10373'],
+ 'abstract': ['3D occupancy prediction is important for autonomous driving due '
+              'to its comprehensive perception of the surroundings. To '
+              'incorporate sequential inputs, most existing methods fuse '
+              'representations from previous frames to infer the current 3D '
+              'occupancy. However, they fail to consider the continuity of '
+              'driving scenarios and ignore the strong prior provided by the '
+              'evolution of 3D scenes (e.g., only dynamic objects move). In '
+              'this paper, we propose a world-model-based framework to exploit '
+              'the scene evolution for perception. We reformulate 3D occupancy '
+              'prediction as a 4D occupancy forecasting problem conditioned on '
+              'the current sensor input. We decompose the scene evolution into '
+              'three factors: 1) ego motion alignment of static scenes; 2) '
+              'local movements of dynamic objects; and 3) completion of '
+              'newly-observed scenes. We then employ a Gaussian world model '
+              '(GaussianWorld) to explicitly exploit these priors and infer '
+              'the scene evolution in the 3D Gaussian space considering the '
+              'current RGB observation. We evaluate the effectiveness of our '
+              'framework on the widely used nuScenes dataset. Our '
+              'GaussianWorld improves the performance of the single-frame '
+              'counterpart by over 2% in mIoU without introducing additional '
+              'computations. Code: https://github.com/zuosc19/GaussianWorld.'],
+ 'all_cat': ['cs.CV', 'cs.AI', 'cs.LG'],
+ 'author': ['Sicheng Zuo',
+            'Wenzhao Zheng',
+            'Yuanhui Huang',
+            'Jie Zhou',
+            'Jiwen Lu'],
+ 'date': datetime.datetime(2024, 12, 13, 18, 59, 54),
+ 'link': ['https://arxiv.org/abs/2412.10373'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10373'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['GaussianWorld: Gaussian World Model for Streaming 3D Occupancy '
+           'Prediction']}
+2024-12-16 14:19:09,971 - scrapy.crawler - INFO - Received SIGINT, shutting down gracefully. Send again to force 
+2024-12-16 14:19:09,972 - scrapy.core.engine - INFO - Closing spider (shutdown)
+2024-12-16 14:19:11,548 - scrapy.core.engine - DEBUG - Crawled (200) <GET https://arxiv.org/abs/2412.10354> (referer: https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=&terms-0-field=title&classification-computer_science=y&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=2024-12-13&date-to_date=2024-12-16&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first)
+2024-12-16 14:19:11,658 - scrapy.core.scraper - DEBUG - Scraped from <200 https://arxiv.org/abs/2412.10354>
+{'ID': ['2412.10354'],
+ 'abstract': ['We present NeuralOperator, an open-source Python library for '
+              'operator learning. Neural operators generalize neural networks '
+              'to maps between function spaces instead of finite-dimensional '
+              'Euclidean spaces. They can be trained and inferenced on input '
+              'and output functions given at various discretizations, '
+              'satisfying a discretization convergence properties. Built on '
+              'top of PyTorch, NeuralOperator provides all the tools for '
+              'training and deploying neural operator models, as well as '
+              'developing new ones, in a high-quality, tested, open-source '
+              'package. It combines cutting-edge models and customizability '
+              'with a gentle learning curve and simple user interface for '
+              'newcomers.'],
+ 'all_cat': ['cs.LG', 'cs.AI'],
+ 'author': ['Jean Kossaifi',
+            'Nikola Kovachki',
+            'Zongyi Li',
+            'Davit Pitt',
+            'Miguel Liu-Schiaffini',
+            'Robert Joseph George',
+            'Boris Bonev',
+            'Kamyar Azizzadenesheli',
+            'Julius Berner',
+            'Anima Anandkumar'],
+ 'date': datetime.datetime(2024, 12, 13, 18, 49, 37),
+ 'link': ['https://arxiv.org/abs/2412.10354'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10354'],
+ 'primary_cat': ['cs.LG'],
+ 'title': ['A Library for Learning Neural Operators']}
+2024-12-16 14:19:13,635 - scrapy.core.engine - DEBUG - Crawled (200) <GET https://arxiv.org/abs/2412.10357> (referer: https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=&terms-0-field=title&classification-computer_science=y&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=2024-12-13&date-to_date=2024-12-16&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first)
+2024-12-16 14:19:13,747 - scrapy.core.scraper - DEBUG - Scraped from <200 https://arxiv.org/abs/2412.10357>
+{'ID': ['2412.10357'],
+ 'abstract': ['We consider the problem of releasing a sparse histogram under '
+              '$(\\varepsilon, δ)$-differential privacy. The stability '
+              'histogram independently adds noise from a Laplace or Gaussian '
+              'distribution to the non-zero entries and removes those noisy '
+              'counts below a threshold.\n'
+              '  Thereby, the introduction of new non-zero values between '
+              'neighboring histograms is only revealed with probability at '
+              'most $δ$, and typically, the value of the threshold dominates '
+              'the error of the mechanism. We consider the variant of the '
+              'stability histogram with Gaussian noise.\n'
+              "  Recent works ([Joseph and Yu, COLT '24] and [Lebeda, SOSA "
+              "'25]) reduced the error for private histograms using correlated "
+              'Gaussian noise. However, these techniques can not be directly '
+              "applied in the very sparse setting. Instead, we adopt Lebeda's "
+              'technique and show that adding correlated noise to the non-zero '
+              'counts only allows us to reduce the magnitude of noise when we '
+              'have a sparsity bound. This, in turn, allows us to use a lower '
+              'threshold by up to a factor of $1/2$ compared to the '
+              'non-correlated noise mechanism. We then extend our mechanism to '
+              'a setting without a known bound on sparsity. Additionally, we '
+              'show that correlated noise can give a similar improvement for '
+              'the more practical discrete Gaussian mechanism.'],
+ 'all_cat': ['cs.DS', 'cs.CR', 'cs.LG'],
+ 'author': ['Christian Janos Lebeda', 'Lukas Retschmeier'],
+ 'date': datetime.datetime(2024, 12, 13, 18, 51, 33),
+ 'link': ['https://arxiv.org/abs/2412.10357'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10357'],
+ 'primary_cat': ['cs.DS'],
+ 'title': ['The Correlated Gaussian Sparse Histogram Mechanism']}
+2024-12-16 14:19:17,353 - scrapy.core.engine - DEBUG - Crawled (200) <GET https://arxiv.org/abs/2412.10351> (referer: https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=&terms-0-field=title&classification-computer_science=y&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=2024-12-13&date-to_date=2024-12-16&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first)
+2024-12-16 14:19:17,487 - scrapy.core.scraper - DEBUG - Scraped from <200 https://arxiv.org/abs/2412.10351>
+{'ID': ['2412.10351'],
+ 'abstract': ['This paper explores the application of a novel multi-task '
+              'vision transformer (ViT) model for the estimation of canopy '
+              'height models (CHMs) using 4-band National Agriculture Imagery '
+              'Program (NAIP) imagery across the western United States. We '
+              'compare the effectiveness of this model in terms of accuracy '
+              'and precision aggregated across ecoregions and class heights '
+              'versus three other benchmark peer-reviewed models. Key findings '
+              'suggest that, while other benchmark models can provide high '
+              'precision in localized areas, the VibrantVS model has '
+              'substantial advantages across a broad reach of ecoregions in '
+              'the western United States with higher accuracy, higher '
+              'precision, the ability to generate updated inference at a '
+              'cadence of three years or less, and high spatial resolution. '
+              'The VibrantVS model provides significant value for ecological '
+              'monitoring and land management decisions for wildfire '
+              'mitigation.'],
+ 'all_cat': ['cs.CV'],
+ 'author': ['Tony Chang',
+            'Kiarie Ndegwa',
+            'Andreas Gros',
+            'Vincent A. Landau',
+            'Luke J. Zachmann',
+            'Bogdan State',
+            'Mitchell A. Gritts',
+            'Colton W. Miller',
+            'Nathan E. Rutenbeck',
+            'Scott Conway',
+            'Guy Bayes'],
+ 'date': datetime.datetime(2024, 12, 13, 18, 47, 11),
+ 'link': ['https://arxiv.org/abs/2412.10351'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10351'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['VibrantVS: A high-resolution multi-task transformer for forest '
+           'canopy height estimation']}
+2024-12-16 14:19:17,590 - scrapy.core.engine - DEBUG - Crawled (200) <GET https://arxiv.org/abs/2412.10371> (referer: https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=&terms-0-field=title&classification-computer_science=y&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=2024-12-13&date-to_date=2024-12-16&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first)
+2024-12-16 14:19:17,700 - scrapy.core.scraper - DEBUG - Scraped from <200 https://arxiv.org/abs/2412.10371>
+{'ID': ['2412.10371'],
+ 'abstract': ['Vision-based autonomous driving shows great potential due to '
+              'its satisfactory performance and low costs. Most existing '
+              "methods adopt dense representations (e.g., bird's eye view) or "
+              'sparse representations (e.g., instance boxes) for '
+              'decision-making, which suffer from the trade-off between '
+              'comprehensiveness and efficiency. This paper explores a '
+              'Gaussian-centric end-to-end autonomous driving (GaussianAD) '
+              'framework and exploits 3D semantic Gaussians to extensively yet '
+              'sparsely describe the scene. We initialize the scene with '
+              'uniform 3D Gaussians and use surrounding-view images to '
+              'progressively refine them to obtain the 3D Gaussian scene '
+              'representation. We then use sparse convolutions to efficiently '
+              'perform 3D perception (e.g., 3D detection, semantic map '
+              'construction). We predict 3D flows for the Gaussians with '
+              'dynamic semantics and plan the ego trajectory accordingly with '
+              'an objective of future scene forecasting. Our GaussianAD can be '
+              'trained in an end-to-end manner with optional perception labels '
+              'when available. Extensive experiments on the widely used '
+              'nuScenes dataset verify the effectiveness of our end-to-end '
+              'GaussianAD on various tasks including motion planning, 3D '
+              'occupancy prediction, and 4D occupancy forecasting. Code: '
+              'https://github.com/wzzheng/GaussianAD.'],
+ 'all_cat': ['cs.CV', 'cs.AI', 'cs.LG', 'cs.RO'],
+ 'author': ['Wenzhao Zheng',
+            'Junjie Wu',
+            'Yao Zheng',
+            'Sicheng Zuo',
+            'Zixun Xie',
+            'Longchao Yang',
+            'Yong Pan',
+            'Zhihui Hao',
+            'Peng Jia',
+            'Xianpeng Lang',
+            'Shanghang Zhang'],
+ 'date': datetime.datetime(2024, 12, 13, 18, 59, 30),
+ 'link': ['https://arxiv.org/abs/2412.10371'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10371'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['GaussianAD: Gaussian-Centric End-to-End Autonomous Driving']}
+2024-12-16 14:19:18,022 - scrapy.core.engine - DEBUG - Crawled (200) <GET https://arxiv.org/abs/2412.10362> (referer: https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=&terms-0-field=title&classification-computer_science=y&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=2024-12-13&date-to_date=2024-12-16&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first)
+2024-12-16 14:19:18,140 - scrapy.core.scraper - DEBUG - Scraped from <200 https://arxiv.org/abs/2412.10362>
+{'ID': ['2412.10362'],
+ 'abstract': ['Low-rank adapters enable fine-tuning of large models with only '
+              'a small number of parameters, thus reducing storage costs and '
+              'minimizing the risk of catastrophic forgetting. However, they '
+              'often pose optimization challenges, with poor convergence. To '
+              'overcome these challenges, we introduce an over-parameterized '
+              'approach that accelerates training without increasing inference '
+              'costs. This method reparameterizes low-rank adaptation by '
+              'employing a separate MLP and learned embedding for each layer. '
+              'The learned embedding is input to the MLP, which generates the '
+              'adapter parameters. Such overparamaterization has been shown to '
+              'implicitly function as an adaptive learning rate and momentum, '
+              'accelerating optimization. At inference time, the MLP can be '
+              'discarded, leaving behind a standard low-rank adapter. To study '
+              'the effect of MLP overparameterization on a small yet difficult '
+              'proxy task, we implement it for matrix factorization, and find '
+              'it achieves faster convergence and lower final loss. Extending '
+              'this approach to larger-scale tasks, we observe consistent '
+              'performance gains across domains. We achieve improvements in '
+              'vision-language tasks and especially notable increases in image '
+              'generation, with CMMD scores improving by up to 15 points.'],
+ 'all_cat': ['cs.LG', 'cs.CV'],
+ 'author': ['Piotr Teterwak', 'Kate Saenko', 'Bryan A. Plummer', 'Ser-Nam Lim'],
+ 'date': datetime.datetime(2024, 12, 13, 18, 55, 19),
+ 'link': ['https://arxiv.org/abs/2412.10362'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10362'],
+ 'primary_cat': ['cs.LG'],
+ 'title': ['OP-LoRA: The Blessing of Dimensionality']}
+2024-12-16 14:19:19,724 - scrapy.core.engine - DEBUG - Crawled (200) <GET https://arxiv.org/abs/2412.10372> (referer: https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=&terms-0-field=title&classification-computer_science=y&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=2024-12-13&date-to_date=2024-12-16&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first)
+2024-12-16 14:19:19,836 - scrapy.core.scraper - DEBUG - Scraped from <200 https://arxiv.org/abs/2412.10372>
+{'ID': ['2412.10372'],
+ 'abstract': ['Vision-Language Models (VLMs) trained via contrastive learning '
+              'have achieved notable success in natural image tasks. However, '
+              'their application in the medical domain remains limited due to '
+              'the scarcity of openly accessible, large-scale medical '
+              'image-text datasets. Existing medical VLMs either train on '
+              'closed-source proprietary or relatively small open-source '
+              'datasets that do not generalize well. Similarly, most models '
+              'remain specific to a single or limited number of medical '
+              'imaging domains, again restricting their applicability to other '
+              'modalities. To address this gap, we introduce UniMed, a '
+              'large-scale, open-source multi-modal medical dataset comprising '
+              'over 5.3 million image-text pairs across six diverse imaging '
+              'modalities: X-ray, CT, MRI, Ultrasound, Pathology, and Fundus. '
+              'UniMed is developed using a data-collection framework that '
+              'leverages Large Language Models (LLMs) to transform '
+              'modality-specific classification datasets into image-text '
+              'formats while incorporating existing image-text data from the '
+              'medical domain, facilitating scalable VLM pretraining. Using '
+              'UniMed, we trained UniMed-CLIP, a unified VLM for six '
+              'modalities that significantly outperforms existing generalist '
+              'VLMs and matches modality-specific medical VLMs, achieving '
+              'notable gains in zero-shot evaluations. For instance, '
+              'UniMed-CLIP improves over BiomedCLIP (trained on proprietary '
+              'data) by an absolute gain of +12.61, averaged over 21 datasets, '
+              'while using 3x less training data. To facilitate future '
+              'research, we release UniMed dataset, training codes, and models '
+              'at https://github.com/mbzuai-oryx/UniMed-CLIP.'],
+ 'all_cat': ['cs.CV'],
+ 'author': ['Muhammad Uzair Khattak',
+            'Shahina Kunhimon',
+            'Muzammal Naseer',
+            'Salman Khan',
+            'Fahad Shahbaz Khan'],
+ 'date': datetime.datetime(2024, 12, 13, 18, 59, 40),
+ 'link': ['https://arxiv.org/abs/2412.10372'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10372'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['UniMed-CLIP: Towards a Unified Image-Text Pretraining Paradigm for '
+           'Diverse Medical Imaging Modalities']}
+2024-12-16 14:19:20,837 - scrapy.core.engine - DEBUG - Crawled (200) <GET https://arxiv.org/abs/2412.10370> (referer: https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=&terms-0-field=title&classification-computer_science=y&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=2024-12-13&date-to_date=2024-12-16&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first)
+2024-12-16 14:19:20,951 - scrapy.core.scraper - DEBUG - Scraped from <200 https://arxiv.org/abs/2412.10370>
+{'ID': ['2412.10370'],
+ 'abstract': ['We investigate some previously unexplored (or underexplored) '
+              'computational aspects of total variation (TV) distance. First, '
+              'we give a simple deterministic polynomial-time algorithm for '
+              'checking equivalence between mixtures of product distributions, '
+              'over arbitrary alphabets. This corresponds to a special case, '
+              'whereby the TV distance between the two distributions is zero. '
+              'Second, we prove that unless $\\mathsf{NP} \\subseteq '
+              '\\mathsf{RP}$, it is impossible to efficiently estimate the TV '
+              'distance between arbitrary Ising models, even in a '
+              'bounded-error randomized setting.'],
+ 'all_cat': ['cs.DS', 'cs.CC'],
+ 'author': ['Arnab Bhattacharyya',
+            'Sutanu Gayen',
+            'Kuldeep S. Meel',
+            'Dimitrios Myrisiotis',
+            'A. Pavan',
+            'N. V. Vinodchandran'],
+ 'date': datetime.datetime(2024, 12, 13, 18, 58, 53),
+ 'link': ['https://arxiv.org/abs/2412.10370'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10370'],
+ 'primary_cat': ['cs.DS'],
+ 'title': ['Computational Explorations of Total Variation Distance']}
+2024-12-16 14:19:22,444 - scrapy.core.engine - DEBUG - Crawled (200) <GET https://arxiv.org/abs/2412.10360> (referer: https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=&terms-0-field=title&classification-computer_science=y&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=2024-12-13&date-to_date=2024-12-16&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first)
+2024-12-16 14:19:22,473 - scrapy.core.engine - DEBUG - Crawled (200) <GET https://arxiv.org/abs/2412.10369> (referer: https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=&terms-0-field=title&classification-computer_science=y&classification-physics_archives=all&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=2024-12-13&date-to_date=2024-12-16&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first)
+2024-12-16 14:19:22,552 - scrapy.core.scraper - DEBUG - Scraped from <200 https://arxiv.org/abs/2412.10360>
+{'ID': ['2412.10360'],
+ 'abstract': ['Despite the rapid integration of video perception capabilities '
+              'into Large Multimodal Models (LMMs), the underlying mechanisms '
+              'driving their video understanding remain poorly understood. '
+              'Consequently, many design decisions in this domain are made '
+              'without proper justification or analysis. The high '
+              'computational cost of training and evaluating such models, '
+              'coupled with limited open research, hinders the development of '
+              'video-LMMs. To address this, we present a comprehensive study '
+              'that helps uncover what effectively drives video understanding '
+              'in LMMs.\n'
+              '  We begin by critically examining the primary contributors to '
+              'the high computational requirements associated with video-LMM '
+              'research and discover Scaling Consistency, wherein design and '
+              'training decisions made on smaller models and datasets (up to a '
+              'critical size) effectively transfer to larger models. '
+              'Leveraging these insights, we explored many video-specific '
+              'aspects of video-LMMs, including video sampling, architectures, '
+              'data composition, training schedules, and more. For example, we '
+              'demonstrated that fps sampling during training is vastly '
+              'preferable to uniform frame sampling and which vision encoders '
+              'are the best for video representation.\n'
+              '  Guided by these findings, we introduce Apollo, a '
+              'state-of-the-art family of LMMs that achieve superior '
+              'performance across different model sizes. Our models can '
+              'perceive hour-long videos efficiently, with Apollo-3B '
+              'outperforming most existing $7$B models with an impressive 55.1 '
+              'on LongVideoBench. Apollo-7B is state-of-the-art compared to 7B '
+              'LMMs with a 70.9 on MLVU, and 63.3 on Video-MME.'],
+ 'all_cat': ['cs.CV', 'cs.AI'],
+ 'author': ['Orr Zohar',
+            'Xiaohan Wang',
+            'Yann Dubois',
+            'Nikhil Mehta',
+            'Tong Xiao',
+            'Philippe Hansen-Estruch',
+            'Licheng Yu',
+            'Xiaofang Wang',
+            'Felix Juefei-Xu',
+            'Ning Zhang',
+            'Serena Yeung-Levy',
+            'Xide Xia'],
+ 'date': datetime.datetime(2024, 12, 13, 18, 53, 24),
+ 'link': ['https://arxiv.org/abs/2412.10360'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10360'],
+ 'primary_cat': ['cs.CV'],
+ 'title': ['Apollo: An Exploration of Video Understanding in Large Multimodal '
+           'Models']}
+2024-12-16 14:19:22,581 - scrapy.core.scraper - DEBUG - Scraped from <200 https://arxiv.org/abs/2412.10369>
+{'ID': ['2412.10369'],
+ 'abstract': ['We propose a grounded approach to meaning in language typology. '
+              'We treat data from perceptual modalities, such as images, as a '
+              'language-agnostic representation of meaning. Hence, we can '
+              'quantify the function--form relationship between images and '
+              'captions across languages. Inspired by information theory, we '
+              'define "groundedness", an empirical measure of contextual '
+              'semantic contentfulness (formulated as a difference in '
+              'surprisal) which can be computed with multilingual multimodal '
+              'language models. As a proof of concept, we apply this measure '
+              'to the typology of word classes. Our measure captures the '
+              'contentfulness asymmetry between functional (grammatical) and '
+              'lexical (content) classes across languages, but contradicts the '
+              'view that functional classes do not convey content. Moreover, '
+              'we find universal trends in the hierarchy of groundedness '
+              '(e.g., nouns > adjectives > verbs), and show that our measure '
+              'partly correlates with psycholinguistic concreteness norms in '
+              'English. We release a dataset of groundedness scores for 30 '
+              'languages. Our results suggest that the grounded typology '
+              'approach can provide quantitative evidence about semantic '
+              'function in language.'],
+ 'all_cat': ['cs.CL', 'cs.CV'],
+ 'author': ['Coleman Haley', 'Sharon Goldwater', 'Edoardo Ponti'],
+ 'date': datetime.datetime(2024, 12, 13, 18, 58, 48),
+ 'link': ['https://arxiv.org/abs/2412.10369'],
+ 'pdf': ['https://arxiv.org/pdf/2412.10369'],
+ 'primary_cat': ['cs.CL'],
+ 'title': ['A Grounded Typology of Word Classes']}
+2024-12-16 14:19:25,017 - scrapy.crawler - INFO - Received SIGINT twice, forcing unclean shutdown
+2024-12-16 14:19:25,018 - scrapy.core.downloader.handlers.http11 - WARNING - Got data loss in https://arxiv.org/abs/2412.10345. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2024-12-16 14:19:25,019 - scrapy.downloadermiddlewares.retry - DEBUG - Retrying <GET https://arxiv.org/abs/2412.10345> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>, <twisted.python.failure.Failure twisted.web.http._DataLoss: >]
+2024-12-16 14:19:25,019 - scrapy.core.downloader.handlers.http11 - WARNING - Got data loss in https://arxiv.org/abs/2412.10353. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2024-12-16 14:19:25,019 - scrapy.downloadermiddlewares.retry - DEBUG - Retrying <GET https://arxiv.org/abs/2412.10353> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>, <twisted.python.failure.Failure twisted.web.http._DataLoss: >]
+2024-12-16 14:19:25,019 - scrapy.core.downloader.handlers.http11 - WARNING - Got data loss in https://arxiv.org/abs/2412.10348. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2024-12-16 14:19:25,019 - scrapy.downloadermiddlewares.retry - DEBUG - Retrying <GET https://arxiv.org/abs/2412.10348> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>, <twisted.python.failure.Failure twisted.web.http._DataLoss: >]
+2024-12-16 14:19:25,020 - scrapy.core.downloader.handlers.http11 - WARNING - Got data loss in https://arxiv.org/abs/2412.10350. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2024-12-16 14:19:25,020 - scrapy.downloadermiddlewares.retry - DEBUG - Retrying <GET https://arxiv.org/abs/2412.10350> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>, <twisted.python.failure.Failure twisted.web.http._DataLoss: >]
+2024-12-16 14:19:25,020 - scrapy.core.downloader.handlers.http11 - WARNING - Got data loss in https://arxiv.org/abs/2412.10349. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2024-12-16 14:19:25,020 - scrapy.downloadermiddlewares.retry - DEBUG - Retrying <GET https://arxiv.org/abs/2412.10349> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>, <twisted.python.failure.Failure twisted.web.http._DataLoss: >]
+2024-12-16 14:19:25,021 - scrapy.core.downloader.handlers.http11 - WARNING - Got data loss in https://arxiv.org/abs/2412.10347. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2024-12-16 14:19:25,021 - scrapy.downloadermiddlewares.retry - DEBUG - Retrying <GET https://arxiv.org/abs/2412.10347> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>, <twisted.python.failure.Failure twisted.web.http._DataLoss: >]

@@ -40,15 +40,6 @@ class ArxivSpider(scrapy.Spider):
         self.start_urls = [self.url]
         self.total_papers = 0
         
-    def start_requests(self):
-        for url in self.start_urls:
-            yield scrapy.Request(
-                url=url,
-                callback=self.parse,
-                    meta={"proxy": "http://127.0.0.1:7890"},
-                )
-
-
     def parse(self, response):
         logging.info(f"response: {response}")
         for paper in response.css("li.arxiv-result"):
