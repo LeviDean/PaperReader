@@ -1,0 +1,5 @@
+chat:
+  model: azure
+  endpoint: <your-endpoint>
+  api_version: <your-api-version>
+  deployment: <your-deployment>

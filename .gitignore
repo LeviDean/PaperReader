@@ -1,3 +1,6 @@
+# dev config
+dev_config.yaml
+
 # crawler_outputs
 spider_outputs/
 crawler_outputs/
